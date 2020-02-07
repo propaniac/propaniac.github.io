@@ -1,0 +1,186 @@
+/*CSS DOCUMENT*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}    
+
+/* End reset */
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700&display=swap');
+
+body {
+    padding: 24px;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    font-size: 14pt;
+    line-height: 1.25em;
+    
+    /* resource for background: https://leaverou.github.io/css3patterns/#cross-dots */
+    background:
+    radial-gradient(#f5f5f5 3px, transparent 4px),
+    radial-gradient(#f5f5f5 3px, transparent 4px),
+    linear-gradient(#fafafa 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #f5f5f5 75px, #f5f5f5 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #f5f5f5 76px, #f5f5f5 77px, transparent 78px, transparent 109px),
+    #fff;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+
+
+/* Content elements */
+
+.intro {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.intro p {
+    float: left;
+    width: 47%;
+    margin: 1.2em 0 1.2em 2%;
+    height: auto;
+}
+
+.introimage img {
+    width: 47%;
+    max-width: 960px;
+    float: left;
+    margin: 1.2em 2% 1.2em 0;
+}
+
+.maincontent {
+    float: none;
+    display: inline-block;
+}
+
+/* Text formatting */
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom: .2em;
+}
+
+header h2 {
+    font-size: 1.5em;
+    color: #595959;
+    font-style: italic;
+    margin-top: .4em;
+}
+
+h3 {
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+
+p {
+    font-size: 1em;
+}
+
+h6 {
+    margin: 2em 0 0 0;
+    color: #595959;
+    font-style: italic;
+    font-size: 0.75em;
+}
+
+ul {
+    list-style-type: circle;
+    margin: .75em 0 0 0;
+}
+
+ol {
+    list-style-type: decimal;
+    margin: .75em 0 0 0;
+}
+
+li {
+    margin: .85em 0;
+}
+
+
+@media only screen and (max-width: 780px) {
+    body {
+        font-size: 16pt;
+    }
+    
+    header h1 {
+        font-size: 1.4em;
+    }
+    
+    header h2 {
+        font-size: 1.25em;
+    }
+    
+    h3 {
+        font-size: 1em;
+        margin: .75em 0;
+    }
+    
+    .intro p {
+        width: 100%;
+        margin: .8em 0;
+    }
+    
+    .introimage img {
+        float: none;
+        width: 100%;
+        margin: .8em 0;
+    }
+    
+    li {
+        margin: .50em 0;
+    }
+}

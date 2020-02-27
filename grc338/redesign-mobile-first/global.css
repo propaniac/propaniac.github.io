@@ -223,6 +223,10 @@ img {
     margin: 0.75em;
 }
 
+.content img {
+    margin: 1em 0;
+}
+
 .header {
     top: 0;
     left: 0;

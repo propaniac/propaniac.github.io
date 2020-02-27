@@ -1,0 +1,378 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}    
+
+/* End reset */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700&display=swap');
+
+/* Type */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.25em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 120%;
+    margin-bottom: .25em;
+}
+
+em {
+    font-style: italic;
+}
+
+h1 {
+    font-size: 1.75em;
+    margin-bottom: .5em;
+}
+
+h2 {
+    font-size: 1.6em;
+    margin-bottom: .25em;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: .25em;
+}
+
+h4 {
+    font-size: 1.1em;
+    margin-bottom: .25em;
+}
+
+h5 {
+    font-size: 1em
+}
+
+a {
+    color: #096dd9;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .5s;
+}
+
+a:hover {
+    color: #40a9ff;
+}
+
+/* Index Content */
+
+.container {
+    height: 100%;
+    display: inline-block;
+}
+
+.main {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding: .5em;
+    margin: .75em;
+}
+
+.overlay {
+    position: absolute;
+    font-size: 1.5em;
+    top: .5em;
+    left: .5em;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255,255,255,0.60);
+    transition: .5s;
+}
+
+.overlay:hover {
+    background-color: rgba(255,255,255,0.75);
+}
+
+.overlay p {
+    font-weight: bold;
+    color: #003a8c;
+    height: 100%;
+    width: 100%;
+    transform: translate(0, 48%);
+    z-index: 10;
+}
+
+/* Shows Content */
+
+.current, .upcoming {
+    display: inline-block;
+    margin: .75em;
+}
+
+.show {
+    width: 48%;
+    float: left;
+    background-color: #e8e8e8;
+    margin: .75em .5em;
+    padding: .5em;
+}
+
+/* Ticket stuff */
+
+.tickets {
+    margin-top: 2em;
+}
+
+.row {
+    margin: 1em 0;
+}
+
+.buttons {
+    width: 100%;
+    text-align: center;
+}
+
+.confirm {
+    font-size: 1.5em;
+    color: white;
+    background-color: #52c41a;
+    border-radius: .25em;
+    padding: .5em;
+    margin: .5em 0;
+    cursor: pointer;
+}
+
+.confirm:hover {
+    background-color: #237804;
+    color: #e8e8e8;
+}
+
+.cancel {
+    font-size: 1.5em;
+    color: white;
+    background-color: #595959;
+    border-radius: .25em;
+    padding: .5em;
+    margin: .5em 0;
+    cursor: pointer;
+}
+
+.cancel:hover {
+    background-color: #262626;
+    color: #e8e8e8;
+}
+
+/* Global Content */
+
+img {
+    max-width: 100%;
+}
+
+.content {
+    display: inline-block;
+    position: relative;
+    margin: 0.75em;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    margin-bottom: 1em;
+    background-color: #e8e8e8;
+}
+
+.header img {
+    height: 100%;
+    width: 100%;
+    max-width: 10em;
+}
+
+.header ul {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%)
+}
+
+.header li {
+    float: left;
+    margin: 2em 1em;
+}
+
+.header li a {
+    font-size: 2em;
+}
+
+.footer {
+    position: absolute;
+    margin-top: 1em;
+    width: 100%;
+    left: 0;
+    background-color: #e8e8e8;
+    padding: 1em 1em;
+}
+
+/* Footer */ .location {
+    width: 100%;
+    display: inline-block;
+    margin-top: 1em;
+}
+
+/* Footer */ .location h2 {
+    padding: 0 .5em;
+}
+
+/* Footer */ .column {
+    padding: .5em;
+    width: 50%;
+    float: left;
+}
+
+/* Footer */ .contact {
+    text-align: center;
+    height: 100%;
+}
+
+/* Footer */ .phone {
+    font-size: 1.5em;
+    display: inline-block;
+}
+
+/* Footer */ .contact p {
+    display: inline-block;
+    margin-left: .5em;
+}
+
+/* Footer */ .social i {
+    font-size: 3em;
+    margin: 0 .25em;
+}
+
+i {
+    margin: .25em 0;
+}
+
+
+
+
+
+
+
+
+
+/* Mobile */
+
+@media only screen and (max-width: 720px) {
+    
+    p {
+        line-height: 150%;
+        font-size: 1.5em;
+        margin-bottom: .5em;
+    }
+    
+    .header img {
+        max-width: 100%;
+        margin: inherit auto;
+        display: inline-block;
+    }
+    
+    
+    .header ul {
+        position: relative;
+        width: 100%;
+        right: 0;
+        top: 0;
+        transform: translate(0,0);
+        margin: 0 auto;
+        display: inline-block;
+        text-align: center;
+    }
+    
+    .header li {
+        position: relative;
+        float: none;
+        width: 50%;
+        margin: 1em auto;
+    }
+    
+    .main {
+        width: 100%;
+        padding: 0;
+        margin: .5em 0;
+    }
+    
+    .column, .location h2{
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    
+    .column {
+        margin-bottom: .5em;
+    }
+
+    .overlay {
+        top: 0;
+        left: 0;
+    }
+    
+    .show {
+        width: 100%;
+        margin: .5em 0;
+    }
+    
+}

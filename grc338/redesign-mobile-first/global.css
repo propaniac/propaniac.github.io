@@ -59,6 +59,7 @@ table {
 
 body {
     font-family: 'Raleway', sans-serif;
+    font-size: 1.25em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -100,14 +101,14 @@ h5 {
 }
 
 a {
-    color: #096dd9;
+    color: #7cc244;
     font-weight: bold;
     text-decoration: none;
     transition: .5s;
 }
 
 a:hover {
-    color: #40a9ff;
+    color: #349a46;
 }
 
 /* Index Content */
@@ -117,33 +118,40 @@ a:hover {
     display: inline-block;
 }
 
-.main {
+.links {
     position: relative;
     float: left;
     width: 50%;
     padding: .5em;
-    margin: .75em;
+    /* margin: .75em; */
+}
+
+.nav {
+    display: inline-block;
+    position: relative;
+    width: 100%;
 }
 
 .overlay {
     position: absolute;
+    padding: .5em;
     font-size: 1.5em;
-    top: .5em;
-    left: .5em;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     text-align: center;
-    background-color: rgba(255,255,255,0.60);
+    background-color: rgba(255,255,255,0.75);
     transition: .5s;
 }
 
 .overlay:hover {
-    background-color: rgba(255,255,255,0.75);
+    background-color: rgba(255,255,255,0.80);
 }
 
 .overlay p {
     font-weight: bold;
-    color: #003a8c;
+    color: #349a46;
     height: 100%;
     width: 100%;
     transform: translate(0, 48%);
@@ -165,6 +173,10 @@ a:hover {
     padding: .5em;
 }
 
+.show p {
+    margin-bottom: 0.25em;
+}
+
 /* Ticket stuff */
 
 .tickets {
@@ -176,8 +188,13 @@ a:hover {
 }
 
 .buttons {
+    display: absolute;
     width: 100%;
-    text-align: center;
+    text-align: center; 
+}
+
+.show .confirm {
+    margin: 0.25em 0;
 }
 
 .confirm {
@@ -186,13 +203,13 @@ a:hover {
     background-color: #52c41a;
     border-radius: .25em;
     padding: .5em;
-    margin: .5em 0;
+    margin: .25em;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .confirm:hover {
     background-color: #237804;
-    color: #e8e8e8;
 }
 
 .cancel {
@@ -201,13 +218,13 @@ a:hover {
     background-color: #595959;
     border-radius: .25em;
     padding: .5em;
-    margin: .5em 0;
+    margin: .25em;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .cancel:hover {
     background-color: #262626;
-    color: #e8e8e8;
 }
 
 /* Global Content */
@@ -223,7 +240,15 @@ img {
 }
 
 .content img {
-    margin: 1em 0;
+    margin: 0 0 1em;
+}
+
+.content ul p {
+    margin-bottom: .25em;
+}
+
+.content li {
+    margin-left: 1em;
 }
 
 .header {
@@ -323,8 +348,8 @@ i {
     
     p {
         line-height: 150%;
-        font-size: 1.5em;
-        margin-bottom: .5em;
+        font-size: 1em;
+        margin-bottom: 1em;
     }
     
     .header img {
@@ -352,12 +377,6 @@ i {
         margin: 1em auto;
     }
     
-    .main {
-        width: 100%;
-        padding: 0;
-        margin: .5em 0;
-    }
-    
     .column, .location h2{
         width: 100%;
         padding: 0;
@@ -368,6 +387,10 @@ i {
         margin-bottom: .5em;
     }
 
+    .links {
+        width: 100%;
+    }
+    
     .overlay {
         top: 0;
         left: 0;

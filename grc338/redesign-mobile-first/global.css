@@ -134,7 +134,7 @@ a:hover {
 
 .overlay {
     position: absolute;
-    padding: .5em;
+    padding: inherit;
     font-size: 1.5em;
     top: 0;
     left: 0;
@@ -149,13 +149,16 @@ a:hover {
     background-color: rgba(255,255,255,0.80);
 }
 
-.overlay p {
-    font-weight: bold;
-    color: #349a46;
-    height: 100%;
+.links .text {
+    position: absolute;
     width: 100%;
-    transform: translate(0, 48%);
-    z-index: 10;
+    display: block;
+    color: #349a46;
+    font-size: 1.5em;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    
 }
 
 /* Shows Content */

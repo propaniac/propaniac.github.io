@@ -532,4 +532,9 @@ i {
         width: 45%;
     } */
     
+    .total {
+        float: left;
+        padding-left: 1em;
+    }
+    
 }

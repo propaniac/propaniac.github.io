@@ -51,6 +51,10 @@ table {
 
 /* Type */
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -112,6 +116,80 @@ a:hover {
 
 /* Index Content */
 
+.fullpage {
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.imgoverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: .5;
+    z-index: 1;
+}
+
+.fullpage img {
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+}
+
+.fullpage h1 {
+    position: absolute;
+    width: 100%;
+    display: block;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    z-index: 2;
+    padding: 0 20vh;
+    font-style: italic;
+}
+
+.indicator {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-50%,0);
+    height: 4em;
+    width: 5em;
+    text-align: center;
+    background-color: #69c0ff;
+    color: white !important;
+    border-radius: .5em .5em 0 0;
+    padding-top: .5em;
+    z-index: 2;
+}
+
+.indicator a {
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 3em;
+}
+
+.index-content {
+    display: inline-block;
+    position: relative;
+    margin: 0.75em;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 90vh;
+}
+
+.content img {
+    margin: 0 0 1em;
+}
+
 .container {
     height: 100%;
     display: inline-block;
@@ -120,9 +198,9 @@ a:hover {
 .links {
     position: relative;
     float: left;
-    width: 45%;
+    width: 31%;
     padding: .5em;
-    margin: .75em;
+    margin: 0 1%;
     background-color: #69c0ff;
     border-radius: 1em;
     max-width: 600px;
@@ -165,6 +243,48 @@ a:hover {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+}
+
+/* Login */
+
+.form {
+    display: inline-block;
+    width: 100%;
+    padding: 0 1em;
+}
+
+.form h1 {
+    font-style: italic;
+}
+
+.form button {
+    float: none;
+    display: inline-block;
+    width: 50%;
+    right: 0;
+}
+
+input[type=text] {
+    height: auto;
+    width: 75%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 8px solid #69c0ff;
+    font-size: 3em;
+    color: #8c8c8c;
+    outline: none;
+    padding: 4px 0px 4px 0;
+    margin-bottom: 24px;
+    transition: 0.5s;
+    -webkit-appearance: none;
+    border-radius: 0;
+    background-color: #ffffb8;
+}
+
+
+input[type=text]:focus {
+    border: none;
+    border-bottom: 8px solid #1890ff;
 }
 
 /* Bill stuff */
@@ -522,6 +642,7 @@ i {
 
     .links {
         width: 95vw;
+        margin-bottom: 1em;
     }
     
     .overlay {
@@ -540,6 +661,24 @@ i {
     .total {
         float: left;
         padding-left: 1em;
+    }
+    
+    .index-content {
+        margin: .25em;
+        margin-top: 75vh;
+    }
+    
+    .fullpage h1 {
+        padding: 0 2vw
+    }
+    
+    input[type=text] {
+        width: 100%;
+        font-size: 1.7em;
+    }
+    
+    .form button {
+        transform: translate(50%,0)
     }
     
 }

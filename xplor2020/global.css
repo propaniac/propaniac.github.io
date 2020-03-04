@@ -119,16 +119,16 @@ a:hover {
 .fullpage {
     display: inline-block;
     position: absolute;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     top: 0;
     left: 0;
 }
 
 .imgoverlay {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: white;
     opacity: .5;
     z-index: 1;
@@ -186,15 +186,6 @@ a:hover {
     margin-top: 90vh;
 }
 
-.content img {
-    margin: 0 0 1em;
-}
-
-.container {
-    height: 100%;
-    display: inline-block;
-}
-
 .links {
     position: relative;
     float: left;
@@ -204,45 +195,6 @@ a:hover {
     background-color: #69c0ff;
     border-radius: 1em;
     max-width: 600px;
-}
-
-.nav {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-}
-
-.overlay {
-    position: absolute;
-    padding: inherit;
-    font-size: 1.5em;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    background-color: rgba(255,255,255,0);
-    transition: .5s;
-}
-
-.overlay:hover {
-    background-color: rgba(255,255,255,0.30);
-}
-
-.links .text {
-    position: relative;
-    width: 100%;
-    display: block;
-    font-size: 1.5em;
-    text-align: center;
-    max-width: 600px;
-    color: white;
-}
-
-.links img {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 /* Login */
@@ -484,22 +436,22 @@ img {
     max-width: 100%;
 }
 
-.content {
+.content /* Content wrapper */ {
     display: inline-block;
     position: relative;
     margin: 0.75em;
     
 }
 
-.content img {
+.content img /* Content wrapper */ {
     margin: 0 0 1em;
 }
 
-.content ul p {
+.content ul p /* Content wrapper */ {
     margin-bottom: .25em;
 }
 
-.content li {
+.content li /* Content wrapper */ {
     margin-left: 1em;
 }
 
@@ -583,6 +535,44 @@ i {
     margin: .25em 0;
 }
 
+.nav {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    padding: inherit;
+    font-size: 1.5em;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255,255,255,0);
+    transition: .5s;
+}
+
+.overlay:hover {
+    background-color: rgba(255,255,255,0.30);
+}
+
+.links .text {
+    position: relative;
+    width: 100%;
+    display: block;
+    font-size: 1.5em;
+    text-align: center;
+    max-width: 600px;
+    color: white;
+}
+
+.links img {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
 
 
 
@@ -595,12 +585,15 @@ i {
 
 @media only screen and (max-width: 720px) {
     
+    /* Text format stuff */
     p {
         line-height: 150%;
         font-size: 1em;
         margin-bottom: 1em;
     }
     
+    
+    /* Global stuff */
     .header img {
         max-width: 100%;
         margin: inherit auto;
@@ -640,12 +633,12 @@ i {
         margin-bottom: .5em;
     }
 
-    .links {
+    .links /* Part of the .nav wrapper */ {
         width: 95vw;
         margin-bottom: 1em;
     }
     
-    .overlay {
+    .overlay /* Part of the .nav wrapper */ {
         top: 0;
         left: 0;
     }
@@ -658,11 +651,7 @@ i {
         width: 45%;
     } */
     
-    .total {
-        float: left;
-        padding-left: 1em;
-    }
-    
+    /* Index stuff */
     .index-content {
         margin: .25em;
         margin-top: 75vh;
@@ -672,6 +661,7 @@ i {
         padding: 0 2vw
     }
     
+    /* Login stuff */
     input[type=text] {
         width: 100%;
         font-size: 1.7em;
@@ -680,5 +670,13 @@ i {
     .form button {
         transform: translate(50%,0)
     }
+    
+    /* Bill stuff */
+    .total {
+        float: left;
+        padding-left: 1em;
+    }
+    
+    
     
 }

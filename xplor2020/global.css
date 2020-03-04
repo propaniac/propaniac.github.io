@@ -595,7 +595,7 @@ i {
     
     /* Global stuff */
     .header img {
-        max-width: 100%;
+        max-width: 50%;
         margin: inherit auto;
         display: inline-block;
     }
@@ -654,11 +654,12 @@ i {
     /* Index stuff */
     .index-content {
         margin: .25em;
-        margin-top: 75vh;
+        margin-top: 85vh;
     }
     
     .fullpage h1 {
-        padding: 0 2vw
+        padding: 0 2vw;
+        top: 40%;
     }
     
     /* Login stuff */

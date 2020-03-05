@@ -110,6 +110,14 @@ a {
     line-height: 1.2;
 }
 
+b {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
 a:hover {
     color: #69c0ff;
 }
@@ -186,27 +194,12 @@ a:hover {
     margin-top: 90vh;
 }
 
-.links {
-    position: relative;
-    float: left;
-    width: 31%;
-    padding: .5em;
-    margin: 0 1%;
-    background-color: #69c0ff;
-    border-radius: 1em;
-    max-width: 600px;
-}
-
 /* Login */
 
 .form {
     display: inline-block;
     width: 100%;
     padding: 0 1em;
-}
-
-.form h1 {
-    font-style: italic;
 }
 
 .form button {
@@ -222,7 +215,7 @@ input[type=text] {
     box-sizing: border-box;
     border: none;
     border-bottom: 8px solid #69c0ff;
-    font-size: 3em;
+    font-size: 2em;
     color: #8c8c8c;
     outline: none;
     padding: 4px 0px 4px 0;
@@ -266,19 +259,21 @@ input[type=text]:focus {
 
 .head-total {
     grid-column: 2;
+    text-align: right;
 }
 
 .column-1 {
     grid-column: 1;
     display: grid;
     width: 40%;
-    padding: .25em .5em;
+    padding: .25em 1em;
 }
 
 .column-2 {
     grid-column: 2;
     display: grid;
-    padding: .25em 0.5em;
+    padding: .25em 1em;
+    text-align: right;
 }
 
 .row-1 {
@@ -303,16 +298,6 @@ input[type=text]:focus {
 .important {
     font-weight: bold;
     font-size: 1.25em;
-}
-
-.buttons {
-    display: absolute;
-    width: 100%;
-    text-align: center; 
-}
-
-button {
-    font-family: 'Cantarell', sans-serif;;
 }
 
 .accordion {
@@ -347,9 +332,16 @@ button {
     margin: 0;
 }
 
+.subpoint {
+    padding-left: 2em;
+    padding-right: 1em;
+    width: 100%;
+}
+
 .expand {
-    margin-left: 1em !important;
+    margin-left: 1.5em !important;
     color: #237804;
+    font-weight: bold;
 }
 
 .detail {
@@ -378,15 +370,27 @@ button {
     overflow: hidden;
 }
 
+.buttons {
+    display: absolute;
+    width: 100%;
+    text-align: center;
+    max-width: 1000px;
+}
+
+button {
+    font-family: 'Cantarell', sans-serif;;
+}
+
 .confirm {
     font-size: 1.5em;
     color: white;
     background-color: #52c41a;
     border-radius: .25em;
     padding: .5em;
-    margin: .25em;
+    margin-top: .25em;
     cursor: pointer;
     transition: 0.5s;
+    width: 49%;
 }
 
 .confirm:hover {
@@ -399,9 +403,10 @@ button {
     background-color: #595959;
     border-radius: .25em;
     padding: .5em;
-    margin: .25em;
+    margin-top: .25em;
     cursor: pointer;
     transition: 0.5s;
+    width: 49%;
 }
 
 .cancel:hover {
@@ -474,19 +479,43 @@ img {
 }
 
 .header ul {
-    position: absolute;
+    position: relative;
+    width: 100%;
     right: 0;
-    top: 50%;
-    transform: translate(0, -50%)
+    top: 0;
+    transform: translate(0,0);
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
 }
 
 .header li {
-    float: left;
-    margin: 2em 1em;
+    position: relative;
+    float: none;
+    width: 50%;
+    margin: 1em auto;
 }
 
 .header li a {
     font-size: 2em;
+}
+
+/* hamburger menu */
+/* Reference for menu code: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_mobile_navbar */
+
+.header #menu {
+    display: none;
+    
+}
+
+.header a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: auto 0;
+    padding: 0 16px;
+    font-size: 4em;
 }
 
 .footer {
@@ -541,6 +570,16 @@ i {
     width: 100%;
 }
 
+.nav-50 {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.nav-50 h1 {
+    padding: .5em .5em 0;
+}
+
 .overlay {
     position: absolute;
     padding: inherit;
@@ -558,6 +597,28 @@ i {
     background-color: rgba(255,255,255,0.30);
 }
 
+.links {
+    position: relative;
+    float: left;
+    width: 31%;
+    padding: .5em;
+    margin: 0 1%;
+    background-color: #69c0ff;
+    border-radius: 1em;
+    max-width: 600px;
+}
+
+.nav-50 .links {
+    position: relative;
+    float: left;
+    width: 48%;
+    padding: .5em;
+    margin: 0 1%;
+    background-color: #69c0ff;
+    border-radius: 1em;
+    max-width: 600px;
+}
+
 .links .text {
     position: relative;
     width: 100%;
@@ -566,6 +627,7 @@ i {
     text-align: center;
     max-width: 600px;
     color: white;
+    padding: .25em;
 }
 
 .links img {
@@ -580,8 +642,7 @@ i {
 
 
 
-
-/* Mobile */
+/* Mobile breakpoint */
 
 @media only screen and (max-width: 720px) {
     
@@ -595,28 +656,13 @@ i {
     
     /* Global stuff */
     .header img {
-        max-width: 50%;
+        max-width: 75%;
         margin: inherit auto;
         display: inline-block;
     }
     
-    
-    .header ul {
-        position: relative;
-        width: 100%;
-        right: 0;
-        top: 0;
-        transform: translate(0,0);
-        margin: 0 auto;
-        display: inline-block;
-        text-align: center;
-    }
-    
-    .header li {
-        position: relative;
-        float: none;
-        width: 50%;
-        margin: 1em auto;
+    .header a.icon {
+            transform: translate(0,25%);
     }
     
     .profile img {
@@ -635,6 +681,11 @@ i {
 
     .links /* Part of the .nav wrapper */ {
         width: 95vw;
+        margin-bottom: 1em;
+    }
+    
+    .nav-50 .links {
+        width: 95% !important;
         margin-bottom: 1em;
     }
     
@@ -675,9 +726,14 @@ i {
     /* Bill stuff */
     .total {
         float: left;
+        width: 50%;
         padding-left: 1em;
     }
     
-    
+    .expand {
+        right: 1em;
+        transform: translate(0,-50%);
+        position: absolute;
+    }
     
 }

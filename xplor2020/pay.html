@@ -22,7 +22,7 @@
         </a>
         <div id="menu">
             <ul>
-                <li><a href="login.html">Log In</a></li>
+                <li><a href="landing.html">My Bills</a></li>
                 <li><a href="services.html">Our Services</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -41,10 +41,42 @@
     
     <!-- Content goes here! -->
     
-    <div class="content">
-    
-        <h1>Hello, world.</h1>
-    
+    <div class="content" style="max-width: 1000px;">
+        <h1>Address Information</h1>
+        <div class="form">
+            <h1>What's your name?</h1>
+            <input name="name" type="text" id="email_address" placeholder="CUSTOMER NAME"/>
+            <h1>What's your billing address?</h1>
+            <input name="address" type="text" id="email_address" placeholder="1135 FOX CHAPEL DR"/>
+            <h1>What is the city of your billing address?</h1>
+            <input type="text" name="city" id="message" placeholder="ST LOUIS"/>
+            <h1>What is the state that the billing address is in?</h1>
+            <input type="text" name="city" id="message" placeholder="MO"/>
+            <h1>What is the zip code of your billing address?</h1>
+            <input type="text" name="city" id="message" placeholder="33333-3333"/>
+        </div>
+        
+        <h1>Payment Information</h1>
+        <p><em>RaceTrac's web service currently only supports credit and debit card payments. Thank you for your understanding!</em></p>
+        <div class="form">
+            <h1>What is the amount you are paying?</h1>
+            <input name="amount" type="text" id="email_address" placeholder="163.81"/>
+            <h1>What is the name listed on your credit or debit card?</h1>
+            <input name="cardname" type="text" id="email_address" placeholder="CUSTOMER NAME"/>
+            <h1>What is the credit or debit card number?</h1>
+            <input name="card" type="text" id="email_address" placeholder="●●●● ●●●● ●●●● 1234"/>
+            <h1>What is the expiration month of the card?</h1>
+            <input name="month" type="text" id="email_address" placeholder="01"/>
+            <h1>What is the expiration year of the card?</h1>
+            <input name="year" type="text" id="email_address" placeholder="2000"/>
+            <h1>What is the CVV code of the card?</h1>
+            <p><em><a href="https://www.cvvnumber.com/cvv.html" target="_blank">What is my CVV code?</a></em></p>
+            <input name="cvv" type="text" id="email_address" placeholder="123"/>
+        </div>
+        <p><em>Data populated from autofill</em></p>
+        
+        <button class="cancel"  onclick="location.href='breakdown.html'">Cancel</button>
+        <button class="confirm"  onclick="location.href='success.html'">Confirm payment</button>
     </div>
     
     <!-- End of content! -->

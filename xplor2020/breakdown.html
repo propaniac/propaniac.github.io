@@ -17,10 +17,16 @@
     
     <div class="header">
         <a href="index.html"><img src="logo_retina.png" alt="RaceTrac Logo."></a>
-        <ul>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="bill.html">My Bill</a></li>
-        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fas fa-bars" alt="Menu Icon."></i>
+        </a>
+        <div id="menu">
+            <ul>
+                <li><a href="landing.html">My Bills</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
     </div>
     
     
@@ -32,8 +38,11 @@
         </div>
     </div>
     
-    <div class="content">
-        <button class="accordion"><p class="title">RaceTrac Voice</p><div class="total"><p>$19.99</p><p class="expand">See more!</p></div></button>
+    <div class="content" style="width: 90vw;">
+        <h1>Current Bill Details</h1>
+        <p>The following is a breakdown of your current bill, due on <b>4/24/2020</b>. Please, if you have any questions, do feel free to <a href="contact.html">contact us</a> and we will happily support you!</p>
+        
+        <button class="accordion"><p class="title">RaceTrac Voice</p><div class="total"><p>$19.99</p><p class="expand">+</p></div></button>
             <div class="panel">
                 <div class="table">
                     <p class="column-1 row-2">Phone Number</p><p class="column-2 row-2">29.99</p>
@@ -43,7 +52,7 @@
                 <p class="detail">Package includes phone line, modem, 18 calling features, and unlimited calling to USA, Puerto Rico, US Virgin Islands, Guam, and Mexico.</p>
             </div>
         
-        <button class="accordion"><p class="title">RaceTrac TV</p><div class="total"><p>$77.99</p><p class="expand">See more!</p></div></button>
+        <button class="accordion"><p class="title">RaceTrac TV</p><div class="total"><p>$77.99</p><p class="expand">+</p></div></button>
             <div class="panel">
                 <div class="table">
                     <p class="column-1 row-2">RaceTrac Silver TV Package</p><p class="column-2 row-2">84.99</p>
@@ -55,7 +64,7 @@
                 <p class="detail">*Fees include FCC admin, franchise, and municipal PEG access fees.</p>
             </div>
         
-            <button class="accordion"><p class="title">RaceTrac Internet</p><div class="total"><p>$48.99</p><p class="expand">See more!</p></div></button>
+            <button class="accordion"><p class="title">RaceTrac Internet</p><div class="total"><p>$48.99</p><p class="expand">+</p></div></button>
             <div class="panel">
                 <div class="table">
                     <p class="column-1 row-2">RaceTrac Internet & WiFi</p><p class="column-2 row-2">58.99</p>
@@ -64,13 +73,31 @@
                 </div>
             </div>
         
+            <button class="accordion"><p class="title">Adjustments</p><div class="total"><p>-$4.99</p><p class="expand">+</p></div></button>
+            <div class="panel">
+                <div class="table">
+                    <p class="column-1 important row-2">Service Change</p><p class="column-2 important row-2">-$4.99</p>
+                </div>
+                <p class="detail">Adjustments reflect subtractions from balance.</p>
+            </div>
+        
+            <button class="accordion"><p class="title">One-Time Charges</p><div class="total"><p>$5.99</p><p class="expand">+</p></div></button>
+            <div class="panel">
+                <div class="table">
+                    <p class="column-1 important row-2">The Boss (HD)</p><p class="column-2 important row-2">$5.99</p>
+                    
+                </div>
+                <p class="subpoint row-1">Movie Rental on 3/14 at 8:08 P.M.</p>
+                
+                <p class="detail">One-time charges reflect movie rentals and other one-time service charges. If you have any questions or would like to contest any issues, we encourage you to <a href="contact.html">contact us</a>!</p>
+            </div>
+            <div class="buttons">
+                <button class="cancel"  onclick="location.href='contact.html'">Contact us</button>
+                <button class="confirm"  onclick="location.href='pay.html'">Pay my bill</button>
+            </div>
     </div>
     
-        <div>
-            
-            <button class="cancel"  onclick="location.href='contact.html'">Contact us</button>
-            <button class="confirm"  onclick="location.href='pay.html'">Pay my bill</button>
-        </div>
+        
     
     <!-- Script and accordion assets based on https://www.w3schools.com/howto/howto_js_accordion.asp -->
     <script>
@@ -122,6 +149,19 @@
             </div>
         </div>
     </div>
+    
+    <!-- Reference for menu code: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_mobile_navbar -->
+    
+    <script>
+        function myFunction() {
+          var x = document.getElementById("menu");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    </script>
     
 </body>
 </html>

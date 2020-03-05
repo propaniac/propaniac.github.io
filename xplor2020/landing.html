@@ -17,10 +17,16 @@
     
     <div class="header">
         <a href="index.html"><img src="logo_retina.png" alt="RaceTrac Logo."></a>
-        <ul>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="bill.html">My Bill</a></li>
-        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fas fa-bars" alt="Menu Icon."></i>
+        </a>
+        <div id="menu">
+            <ul>
+                <li><a href="landing.html">My Bills</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
     </div>
     
     
@@ -34,22 +40,30 @@
     
     <div class="content">
         
-        <h1>Hello! Welcome to the RaceTrac Online Portal.</h1>
-        <p>Here you can view your look at our services, view previous bill statements, and make payments on current bills.</p>
-
+        <h1>Hello! Welcome to your RaceTrac Online Portal!</h1>
+        <p>Click on a statement to get started!</p>
+        
     </div>
     
-    <div class="nav">
+    <div class="nav-50">
         <div class="links">
-            <img src="images/services.png" alt="Services Icon.">
-                <a class="overlay" href="services.html"></a>
-                <a class="text" href="services.html">RaceTrac's Services</a>
+            <a class="overlay" href="bill.html"></a>
+            <h1>Current Pay Period</h1>
+            <div class="table">
+                <p class="column-1 important row-1">Current Balance</p><p class="column-2 important row-1">$163.32</p>
+                <p class="column-1 row-2">Current Pay Period</p><p class="column-2 row-2">Due 4/24/2020</p>
+            </div>
         </div>
         
         <div class="links">
-            <img src="images/bill.png" alt="Pay Bill Icon.">
-            <a class="overlay" href="bill.html"></a>
-            <a class="text" href="bill.html">See my bill</a>
+            <a class="overlay" href="previous.html"></a>
+            <h1>Previous Pay Period</h1>
+            <div class="table">
+                <p class="column-1 important row-1">Previously Owed</p><p class="column-2 row-1 important">$153.81</p>
+                <p class="column-1 important subpoint row-2">ETF Payment</p><p class="column-2 important row-2">-$53.81</p>
+                <p class="column-1 important subpoint row-2">Credit Card Payment</p><p class="column-2 important row-2">-$100.00</p>
+                
+            </div>
         </div>
     </div>
     
@@ -84,6 +98,19 @@
             </div>
         </div>
     </div>
+    
+    <!-- Reference for menu code: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_mobile_navbar -->
+    
+    <script>
+        function myFunction() {
+          var x = document.getElementById("menu");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    </script>
     
 </body>
 </html>

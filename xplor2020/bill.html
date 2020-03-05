@@ -17,10 +17,16 @@
     
     <div class="header">
         <a href="index.html"><img src="logo_retina.png" alt="RaceTrac Logo."></a>
-        <ul>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="bill.html">My Bill</a></li>
-        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fas fa-bars" alt="Menu Icon."></i>
+        </a>
+        <div id="menu">
+            <ul>
+                <li><a href="landing.html">My Bills</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
     </div>
     
     
@@ -45,10 +51,13 @@
             <p class="column-1 row-1">Partial Month Charges</p><p class="column-2 row-1">4.51</p>
             <p class="column-1 row-2">Taxes, Fees and Charges</p><p class="column-2 row-2">7.82</p>
             <p class="column-1 important row-1">Total due</p><p class="column-2 important row-1">$163.32</p>
-            
-            <button class="cancel"  onclick="location.href='breakdown.html'">See more details</button>
-            <button class="confirm"  onclick="location.href='pay.html'">Pay my bill</button>
         </div>
+    <div class="buttons">
+    
+        <button class="cancel"  onclick="location.href='breakdown.html'">Bill details</button>
+        <button class="confirm"  onclick="location.href='pay.html'">Pay my bill</button>
+        
+    </div>
     
     <div class="footer">
         <div class="contact">
@@ -81,6 +90,19 @@
             </div>
         </div>
     </div>
+    
+    <!-- Reference for menu code: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_mobile_navbar -->
+    
+    <script>
+        function myFunction() {
+          var x = document.getElementById("menu");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    </script>
     
 </body>
 </html>

@@ -17,6 +17,16 @@
     
     <div class="header">
         <a href="index.html"><img src="logo_retina.png" alt="RaceTrac Logo."></a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fas fa-bars" alt="Menu Icon."></i>
+        </a>
+        <div id="menu">
+            <ul>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
     </div>
     
     <div class="fullpage">
@@ -98,6 +108,19 @@
             </div>
         </div>
     </div>
+    
+    <!-- Reference for menu code: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_mobile_navbar -->
+    
+    <script>
+        function myFunction() {
+          var x = document.getElementById("menu");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    </script>
     
 </body>
 </html>

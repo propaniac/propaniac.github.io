@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="global.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700&display=swap" rel="stylesheet">
     
-    
     <script src="https://kit.fontawesome.com/d0b8b62b75.js" crossorigin="anonymous"></script>
     
 </head>
@@ -25,16 +24,35 @@
         </ul>
     </div>
     
-    <div class="nav">
-        <a href="about.html">
-            <i class="fas fa-book" alt="Book Icon."></i>
-            <p class="text">About the Palm Theatre</p>
-        </a>
-        
-        <a href="shows.html">
-            <i class="fas fa-film" alt="Movie Film Icon."></i>
-            <p class="text">Now Showing</p>
-        </a>
+    <div class="content">
+        <h1>Ticket Prices</h1>
+            <ul>
+                <li><p>General Admission: $10.00</p></li>
+                <li><p>Seniors and Children (under 12): $8.00</p></li>
+                <li><p>Matinees (Shows before 5 P.M.): $8.00</p></li>
+                <li><p>Monday Bargain Night: $6.00</p></li>
+                <li><p>Super Discount Cards: 6 Admissions for $48.00</p></li>
+            </ul>
+        <div class="tickets">
+            <h2>Online Ticket Sales</h2>
+                <div class="row">
+                    <label for="type">Select a ticket type:</label>
+                    <select id="type" name="type">
+                        <option value="general">General</option>
+                        <option value="senior">Senior</option>
+                        <option value="child">Child</option>
+                        <option value="matinee">Matinee</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label for="quantity">How many tickets would you like to buy?</label>
+                    <input type="number" id="quantity" placeholder="1">
+                </div>
+                <div class="buttons">
+                    <button class="cancel" onclick="location.href='shows.html'">Cancel Purchase</button>
+                    <button class="confirm" onclick="location.href='success.html'">Confirm Purchase</button>
+                </div>
+        </div>
     </div>
     
     <div class="footer">
@@ -66,3 +84,5 @@
     
 </body>
 </html>
+
+        

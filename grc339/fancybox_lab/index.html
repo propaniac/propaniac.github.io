@@ -1,1 +1,63 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+    
+    <style>
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* simple gallery */
+
+        .photo-grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-auto-rows: 240px;
+        }
+    
+    </style>
+    
+</head>
+
+<body>
+
+    <section class="photo-grid">
+        <div class="item">
+            <a href="images/20190401-DSCF0027-2_main.jpg" data-fancybox="images" data-caption>
+                <img src="images/20190401-DSCF0027-2_thumb.jpg">
+            </a>
+        </div>
+        <div class="item">
+            <a href="images/20190401-DSCF0041-2_main.jpg" data-fancybox="images" data-caption>
+                <img src="images/20190401-DSCF0041-2_thumb.jpg">
+            </a>
+        </div>
+        <div class="item">
+            <a href="images/20190401-DSCF0052-2_main.jpg" data-fancybox="images" data-caption>
+                <img src="images/20190401-DSCF0052-2_thumb.jpg">
+            </a>
+        </div>
+        <div class="item">
+            <a href="images/20190401-DSCF0104-2_main.jpg" data-fancybox="images" data-caption>
+                <img src="images/20190401-DSCF0104-2_thumb.jpg">
+            </a>
+        </div>
+        <div class="item">
+            <a href="images/20190401-DSCF0119-2_main.jpg" data-fancybox="images" data-caption>
+                <img src="images/20190401-DSCF0119-2_thumb.jpg">
+            </a>
+        </div>
+    </section>
+
+  </body>

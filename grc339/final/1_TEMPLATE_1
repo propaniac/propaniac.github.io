@@ -1,0 +1,29 @@
+<head>
+  <title>Tracey Sketchit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="global.css">
+    
+  <style>
+  </style>
+    
+</head>
+<body>
+  <header>
+      <a href="index.html"><img src="images/logo_retina.png" alt="Tracey Cardillo logo, with pink and blue cirular emblem followed by name in futuristic font"></a>
+      <a name="top" class="upbutton_anchor"></a>
+  </header>
+  
+  <div class="content">
+  </div>
+  
+  <footer>
+      <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a target="_blank" href="tracey-cardillo-resume.pdf">Resumé</a></li>
+      </ul>
+      <a href="#top" class="upbutton">^</a>
+  </footer>
+
+</body>
+</html>

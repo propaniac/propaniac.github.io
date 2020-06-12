@@ -1,0 +1,466 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}    
+
+/* End reset */
+
+/* Main Nav */
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap');
+
+body {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+article {
+    top: 80px;
+    margin: 0 auto;
+    width: 95vw;
+    height: auto;
+    max-width: 1080px;
+    padding-bottom: 80px;
+    position: relative;
+}
+
+header {
+    position: fixed;
+    overflow: hidden;
+    background-color: #adc6ff;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    margin-bottom: 16px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+header a {
+    float: left;
+    color: #595959;
+    text-align: center;
+    padding: 8px 8px 6px 8px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+    
+header a:hover {
+    color: black;
+}
+
+header img {
+    height: 48px;
+    width: auto;
+    padding-bottom: 0;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 60px;
+    background-color: #adc6ff;
+    z-index: 10;
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul {
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer a {
+    color: #595959;
+    text-align: center;
+    padding: 0 12px 0 12px;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: 0.5s;
+    font-weight: 700;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer .upbutton {
+    background-color: rgb(255,173,210);
+    color: white !important;
+    height: 60px;
+    width: 60px;
+    padding: 8px !important;
+    text-align: center;
+    z-index: 15;
+    font-weight: 400;
+    font-size: 24pt;
+    padding-top: 22px !important;
+    visibility: hidden;
+    margin-left: 60px;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    }
+
+.upbutton_anchor {
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+
+/* Content */
+    
+h1 {
+    line-height: 1.5;
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-top: 12px;
+}
+
+h2 {
+    line-height: 1.4;
+    font-weight: bold;
+    font-size: 1.65em;
+    margin-top: 4px;
+}
+
+strong {
+    font-weight: 700;
+}
+    
+p {
+    padding-bottom: 16px;
+    font-size: 1.6em;
+    line-height: 1.7;
+}
+    
+a {
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #ff85c0;
+}
+
+p a, h1 a, h2 a {
+    color: #eb2f96;
+    -webkit-transform: perspective(1px) translateZ(0);
+    -ms-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-property: color;
+    transition-property: color;
+    webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    position: relative;
+  }
+  
+p a:before, h1 a:before, h2 a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: .2em;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #eb2f96;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    transform-origin: 50%;
+    -webkit-transform-origin: 50%;
+    transition-property: transform;
+    -webkit-transition-property: transform;
+    transition-duration: 0.25s;
+    -webkit-transition-duration: 0.25s;
+    transition-timing-function: ease-out;
+    -webkit-transition-timing-function: ease-out;
+  }
+  
+p a:hover:before, h1 a:hover:before, h2 a:hover:before {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+  }
+  
+
+/* Flexes and Grids */
+
+.row {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    width: 95vw;
+    max-width: 1080px;
+    grid-gap: 1em;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.column-text-vcenter {
+    align-items: center;
+}
+
+.row img {
+    width: 45vw;
+    max-width: 540px;
+    height: auto;
+    max-height: 70vh;
+    object-fit: cover;
+}
+
+.row iframe {
+    margin-right: auto;
+    margin-left: auto;
+    width: 45vw;
+    max-width: 540px;
+}
+
+li {
+    list-style-type: circle;
+    font-size: 1.4em;
+    margin-left: 32px;
+}
+
+.imgdesc {
+    margin: 16px 0 8px 0;
+    padding-bottom: 0;
+    font-weight: 700;
+    color: #8c8c8c;
+}
+
+input[type=text] {
+    height: auto;
+    width: 50%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 8px solid rgb(255,173,210);
+    font-size: 3em;
+    color: #8c8c8c;
+    outline: none;
+    padding: 4px 0px 4px 0;
+    margin-bottom: 24px;
+    transition: 0.5s;
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+textarea {
+    width: 100%;
+    height: 4em;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 8px solid rgb(255,173,210);
+    font-size: 3em;
+    font-family: 'Work Sans', sans-serif;
+    color: #8c8c8c;
+    outline: none;
+    padding: 4px 0px 4px 0;
+    margin-bottom: 24px;
+    transition: 0.5s;
+    overflow: auto; 
+    overflow-x: hidden;
+    overflow-y: scroll;
+    resize: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+input[type=text]:focus {
+    border: 2px solid black;
+    border-bottom: 8px solid #adc6ff;
+}
+
+textarea:focus {
+    border: 2px solid black;
+    border-bottom: 8px solid #adc6ff;
+}
+
+input[type=submit] {
+    box-sizing: border-box;
+    border: none;
+    background-color: rgb(255,173,210);
+    font-size: 3em;
+    font-weight: 700;
+    color: black;
+    outline: none;
+    padding: 8px 16px;
+    transition: 0.5s;
+    border-radius: 8px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+input[type=submit]:hover {
+    border: none;
+    background-color: #ffd6e7;
+}
+
+/* Breakpoints */
+
+@media only screen and (max-width: 1280px) {
+    footer {
+        position: fixed;
+    }
+    
+    header {
+        position: absolute;
+        align-content: center;
+    }
+    
+    article {
+        top: 80px;
+        padding-bottom: 30px;
+    }
+    
+    .column-text-vcenter {
+    transform: translate(0,0);
+    }
+    
+    input[type=text] {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    footer .upbutton {
+        visibility: visible;
+    }
+    
+    footer a {
+        font-size: 1em;
+        padding: 0 2px;
+    }
+    
+    footer {
+        padding-right: 68px;
+    }
+    
+    input[type=text] {
+        width: 100%;
+        font-size: 2em;
+    }
+    
+    textarea {
+        font-size: 2em;
+        text-align: top;
+    }
+    
+    input[type=submit] {
+        font-size: 2em;
+    }
+    
+    p {
+        font-size: 1.2em
+    }
+    
+    h1 {
+        font-weight: bold;
+        font-size: 1.4em;
+    }
+    
+    h2 {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    
+    .row {
+        margin: 0 auto;
+        grid-gap: 0;
+        width: 95vw;
+        flex-direction: column;
+    }
+    
+    .row img {
+        width: 95vw;
+        max-width: none;
+        align-self: center;
+        padding: 0;
+    }
+
+    .row iframe {
+        width: 95vw;
+        max-width: none;
+        align-self: center;
+        padding: 0;
+    }
+    
+    
+    article {
+        padding-bottom: 60px; 
+    }
+}

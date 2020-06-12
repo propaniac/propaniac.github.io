@@ -1,1 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Tracey Cardillo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="global.css">
+    
+    <style>
 
+        body {
+            margin: 0;
+            max-width: 1080px;
+            overflow-x: hidden;
+        }
+
+        main {
+            margin-bottom: 80px;
+        }
+
+        .grid {
+            display: grid;
+            grid-gap: 1em;
+            width: 100vw;
+            margin-top: 80px;
+            grid-template-columns: repeat(3, 30vw);
+            justify-content: center;
+        }
+
+        .grid img {
+            width: 30vw;
+            max-width: 640px;
+            height: 30vw;
+            max-height: 640px;
+            object-fit: cover;
+        }
+
+        .description {
+            width: 30vw;
+            max-width: 640px;
+            height: 30vw;
+            max-height: 640px;
+            color: white !important;
+            padding: 1em 1.5em;
+            background-color: rgba(255,173,210, 0.90);
+            font-weight: 400;
+            opacity: 0;
+            transition: .5s ease;
+        }
+
+        .description:hover {
+            opacity: 1;
+        }
+
+        .description p {
+            line-height: 1.4;
+        }
+
+        .one {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .two {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .three {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        .four {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .five {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .six {
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+        @media only screen and (max-width: 1280px) {
+            .grid {
+                grid-template-columns: repeat(2, 45vw)
+            }
+
+            .grid img {
+                height: 45vw;
+                width: 45vw;
+            }
+
+            .description {
+                width: 45vw;
+                height: 45vw;
+            }
+
+            .one {
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+            .two {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            .three {
+                grid-column: 1;
+                grid-row: 2;
+            }
+
+            .four {
+                grid-column: 2;
+                grid-row: 2;
+            }
+
+            .five {
+                grid-column: 1;
+                grid-row: 3;
+            }
+
+            .six {
+                grid-column: 2;
+                grid-row: 3;
+            }
+    }
+
+        @media only screen and (max-width: 780px) {
+            .grid {
+                grid-template-columns: repeat(1, 90vw);
+                row-gap: 2em;
+            }
+
+            .grid img {
+                height: 90vw;
+                max-height: unset;
+                width: 90vw;
+                max-width: unset;
+            }
+
+            .description {
+                width: 90vw;
+                max-width: unset;
+                height: auto;
+                background-color: rgb(255,173,210);
+                margin-top: 100%;
+                opacity: 1;
+
+            }
+
+            .one {
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+            .two {
+                grid-column: 1;
+                grid-row: 2;
+            }
+
+            .three {
+                grid-column: 1;
+                grid-row: 3;
+            }
+
+            .four {
+                grid-column: 1;
+                grid-row: 4;
+            }
+
+            .five {
+                grid-column: 1;
+                grid-row: 5;
+            }
+
+            .six {
+                grid-column: 1;
+                grid-row: 6;
+            }
+        }
+
+    </style>
+</head>
+    
+    
+<body>
+    
+    <header>
+        <a href="index.html"><img src="images/logo_retina.png" alt="Tracey Cardillo logo, with pink and blue cirular emblem followed by name in futuristic font"></a>
+        <a name="top" class="upbutton_anchor"></a>
+    </header>
+
+    <main class="grid">
+
+        <!-- Portfolio Item 3 -->
+        <a class="one" target="_self" href="opc.html">
+            <img src="images/OPC-preview.jpg" alt="Our Paths Cross Logo Project Preview" class="one">
+        </a>
+        <a target="_self" class="description one" href="opc.html">
+            <h1 style="margin-top: 0;">Our Paths Cross Logo Project</h1>
+            <p>Logo project for the Our Paths Cross blog hosting clients — a minimalist, yet vibrant ode to the outdoorsy content the clients share. From ideation to the final product, see the steps it took in order to create the logo, and maybe check out the blog, too!</p>
+        </a>
+
+        <!-- Portfolio Item 2 -->
+        <a target="_self" class="two" href="product.html">
+            <img src="images/product-preview.jpg" alt="SNES Product Shoot Project Preview" class="two">
+        </a>
+        <a target="_self" class="description two" href="product.html">
+            <h1 style="margin-top: 0;">Super Nintendo Product Shoot</h1>
+            <p>A project for a course with Brian P. Lawler of California Polytechnic State University, and a nod to personal interests. See a glimpse at one of my favorite pieces in my video game collection, the Super Nintendo Entertainment System along with an authentic Earthbound cartridge.</p>
+        </a>
+
+        <!-- Portfolio Item 3 -->
+        <a target="_self" class="three" href="2001.html">
+            <img src="images/2001-preview.jpg" alt="2001: A Space Odyssey Movie Poster Project Preview" class="three">
+        </a>
+        <a target="_self" class="description three" href="2001.html">
+                <h1 style="margin-top: 0;">Movie Poster Project</h1>
+                <p>A class project to create a movie poster based upon a favorite film, created with inspiration from minimalist design and the philosophical notions of the film, a chaotic piece that has become among my favorites.</p>
+        </a>
+
+        <!-- Portfolio Item 4 -->
+        <a target="_self" class="four" href="ramp.html">
+            <img src="images/Ramp-preview.jpg" alt="Skateboard Ramp Project Preview" class="four">
+        </a>
+        <a target="_self" class="description four" href="ramp.html">
+            <h1 style="margin-top: 0;">Half-Pipe Personal Project</h1>
+            <p>For a personal project, which holds much meaning for me, created technical drafts for a skateboard and bicycle ramp, as well as built the product over the process of a long, emotional summer.</p>
+        </a>
+
+        <!-- Portfolio Item 5 -->
+        <a target="_self" class="five" href="technical.html">
+            <img src="images/technical-preview.jpg" alt="Nintendo 64 Controller Technical Drawing Project Preview" class="five">
+        </a>
+        <a target="_self" class="description five" href="technical.html">
+            <h1 style="margin-top: 0;">N64 Technical Drawing</h1>
+            <p>For an assignment, created a technical drawing of the infamous Nintendo 64 controller, a product which has played a massive part in my life. An intimate look inside the belly of the beast, as well as re-creation of the portions of the controller which serve a purpose.</p>
+        </a>
+        
+        <!-- Portfolio Item 6 -->
+        <a target="_self" class="six" href="buddyBowl.html">
+            <img src="images/buddyBowl-03.jpg" alt="Buddy Bowl Product Project Preview" class="six">
+        </a>
+        <a target="_self" class="description six" href="buddyBowl.html">
+            <h1 style="margin-top: 0;">Buddy Bowl Project</h1>
+            <p>A group project for a marketing and sales course where the group, comprised of Samantha S., Haley A., and myself, was tasked with the design and marketing of a product.
+        </p></a>
+    </main>
+    
+     <footer>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a target="_blank" href="tracey-cardillo-resume.pdf">Resumé</a></li>
+        </ul>
+        <a href="#top" class="upbutton">^</a>
+    </footer>
+
+</body>
+</html>

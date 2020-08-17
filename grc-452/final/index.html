@@ -1,1 +1,139 @@
+<!doctype html>
+<html>
+<head>
+    
+<meta charset="UTF-8">
+<title>GrC 452 Final</title>
 
+<!-- Font for styling -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+<!-- CSS link -->
+<link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <header>
+        <h1>GrC 452: Final</h1>
+    </header>
+    
+    
+    <!-- Changes will be made for this main id and its classes based upon the checked radios -->
+    <section id="flexMain" class="flexRow flexBaseline flexJustifyCenter">
+        <!-- A class will be added to id each of these div's based upon the input in the order field -->
+        <div id="one" class="1">
+            <p>#1</p>
+        </div>
+        
+        <div id="two">
+            <p>#2</p>
+        </div>
+        
+        <div id="three">
+            <p>#3</p>
+        </div>
+    </section>
+    
+    <section id="main">
+        <div id="tabs">
+            <a class="tablinks" onclick="openTab(event, 'About')" id="defaultOpen">About this lesson</a>
+            <a class="tablinks" onclick="openTab(event, 'Lesson')">Adjusting the flex objects</a>
+            <a class="tablinks" onclick="openTab(event, 'Conclusions')">Conclusions</a>
+        </div>
+
+
+        <div class="tabcontent" id="About">
+
+            <h2>About this lesson</h2>
+            <p>"Flex" objects are a modern format for handling content on webpages with simple CSS. As opposed to things like "float" and "table," a flex object offers flexibility in seamless manner, allowing for easy handling of things that are difficult with alternatives, such as true vertical centering of blocks with a simple property and value setting, multi-column layouts with variously sized objects, content wrapping without breakpoints, and re-ordering of objects with CSS and little to no modification to the HTML.</p>
+            <p>In this lesson, using a form you will be able to adjust the contents of the flex container above. While only a handful of the properties and values that are part of flex's capabilities can be altered, a wide variety of layout options are available to adjust through the form, with a wide array of combinations to choose from.</p>
+            <p>Navigating to the next tab will bring you to a simple form, where you may toggle between a few different options, then click the "Commit Changes" button in order to alter the content above! Clicking the "Cancel Changes" button will revert the options and the content back to the way things were when you first accessed the page.</p>
+
+        </div>
+
+        <div class="tabcontent" id="Lesson">
+            <!-- Form block for formatting purposes -->
+            <form id="myForm">
+                <div id="flexDirection">
+                    <h2>Flex Direction</h2> <!-- Resource: https://www.w3schools.com/tags/att_input_type_radio.asp -->
+                        <input type="radio" id="row" name="direction" value="row" checked>
+                        <label for="row">Row</label><br>
+                        <input type="radio" id="column" name="direction" value="column">
+                        <label for="column">Column</label><br>
+                </div>
+
+                <div id="flexJustification">
+                    <h2>Flex Justification</h2> <!-- Resource: https://www.w3schools.com/tags/att_input_type_radio.asp -->
+                        <input type="radio" id="justifyCenter" name="justify" value="justifyCenter" checked>
+                        <label for="justifyCenter">Center</label><br>
+                        <input type="radio" id="around" name="justify" value="around">
+                        <label for="around">Space Around</label><br>
+                        <input type="radio" id="between" name="justify" value="between">
+                        <label for="between">Space Between</label><br>
+                        <input type="radio" id="justifyStart"  value="justifyStart" name="justify">
+                        <label for="justifyStart">Start</label><br>
+                        <input type="radio" id="justifyEnd"  value="justifyEnd" name="justify">
+                        <label for="justifyEnd">End</label><br>
+
+                </div>
+
+                <div id="flexAlignItems">
+                    <h2>Flex Alignment</h2> <!-- Resource: https://www.w3schools.com/tags/att_input_type_radio.asp -->
+                        <input type="radio" id="baseline"  value="baseline" name="align" checked>
+                        <label for="baseline">Baseline</label><br>
+                        <input type="radio" id="stretch"  value="stretch" name="align">
+                        <label for="stretch">Stretch</label><br>
+                        <input type="radio" id="alignCenter"  value="alignCenter" name="align">
+                        <label for="alignCenter">Center</label><br>
+                        <input type="radio" id="alignStart"  value="alignStart" name="align">
+                        <label for="alignStart">Start</label><br>
+                        <input type="radio" id="alignEnd"  value="alignEnd" name="align">
+                        <label for="alignEnd">End</label><br>
+                </div>
+
+                <div id="flexOrder">
+                    <h2>Order</h2>
+                        <label for="order">Position of block #1:</label>
+                        <input type="number" id="order" name="order" value="1" min="1" max="3">
+                        <!-- This isn't final, but I'm thinking this can define the placement of the "#1" block. I presume I will need to have code that converts the value into correct format, given that block #1 is position 0, #3 is 2, etc. -->
+                </div>
+            </form>
+
+            <!-- Main buttons -->
+        <input type="button" id="cancel" value="Cancel Changes">
+        <input type="button" id="submit" value="Commit Changes">
+        </div>
+
+        <div class="tabcontent" id="Conclusions">
+            <h2>Putting it all together></h2>
+            <p>I hope that you had fun messing with this page! I would like for this to be a good learning experience about the capabilities of flex objects, without having to look at the code. The flexibility that flex objects have to offer, especially when pairing them together to form parent-child relationships, makes for a phenomenal layout tool!</p>
+            <p>There are many resources available to learn even more about flex objects, and I would recommend <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">this page about flexbox from Mozilla</a> as well as <a href="https://www.internetingishard.com/html-and-css/flexbox/">this article from Interneting Is Hard</a> if you are wanting to learn more!</p>
+            
+            <h2>The code</h2>
+            <p>If you would like to see the code that makes this all work, it will be as follows. Additionally, <span class="warning">this is your warning: if you do not wish to see any code, do not click the button.</span></p>
+            
+            <input type=button id="showMeTheCode" value="I fear nothing. Show me the code.">
+            
+            <div id="theCode" style="display: none;">
+                <p>You have done well to make it this far... Now, on to the code.</p>
+                <p>Thanks to the simplicity of flex, the CSS itself isn't too complicated, normally.</p>
+                <img src="images/cssMainFlex.png" alt="Parent and child element CSS screenshot. Two classes with various styling to prettify things, but with the main properties and values we care about being display: flex">
+                <p>For the most part, these two classes are pretty standard in terms of CSS, but they are set to "display: flex" which is the key to using flexbox. Aside from these settings, the difference between these two elements is that one is the parent (the white rectangle seen above) and the other element contains the settings for the child elements (the blue rectables seen within the white rectangle). I set the child elements to have more strict settings, since they aren't touched by the script behind this page, but the parent element has minimal styling for the flex properties, since they will be added later.</p>
+                <img src="images/cssAddedClasses.png" alt="Screenshot showing 15 CSS classes. Each class has only one or two lines of code, and these are the main classes behind the demonstration page and radio buttons.">
+                <p>This is where things get a little more complicated. Under normal circumstances, we would simply add the flex properties and values we want to the parent/main element, but this is an interactive page and things are not that simple. In order to make the script as simple as possible, managing things with sub-classes was, in my mind, the most effective and seamless.</p>
+                <img src="images/jsCommitAndCancelCode.png" alt="Screenshot showing the code for the Commit button. Various if statements run for each form section, adding the CSS class from above based upon the selected option.">
+                <p>The script behind this is mainly run by if and else if statements, which are set up for each form section. Dependent upon the selected radio button, we add a class to the parent flex object which causes the desired property and value to be assigned. The numeric input for the order field is a bit different, as it adds a class to the child elements dependent upon the number entered. These conditions are only run after the Commit button is clicked — in the future it might be interesting to have the changes commit as values are changed, but for now this will suffice.</p>
+                <p>The Cancel button (which isn't shown in the screenshot, but it simple enough in comparison) reverts all of the form fields back to default, as well as reverts any changes that may have been made to the CSS.</p>
+                <p>And that is all. I learned a good deal from this process, and certainly some good skills for future projects! Thank you for your time, if you made it this far.</p>
+            </div>
+
+        </div>
+    </section>
+    
+    
+    <!-- Script calls -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="final.js"></script>
+</body>
+</html>

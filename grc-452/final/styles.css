@@ -1,0 +1,265 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #eeeeee;
+    margin: 2em auto;
+    width: 70vw;
+    max-width: 1280px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin-top: 1em ;
+}
+
+p {
+    line-height: 180%
+}
+
+b {
+    font-weight: 400;
+}
+
+form {
+    line-height: 1.2;
+}
+form div {
+    margin-bottom: 0.5em;
+}
+
+form label {
+    margin-left: 1em;
+}
+
+#flexOrder label {
+    margin-left: 0;
+}
+
+#submit {
+    position: relative;
+    margin: 1em 0 1%;
+    width: 49%;
+    height: 3em;
+    float: left;
+    color: white;
+    background-color: #595959;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 1.2em;
+}
+
+#submit:hover {
+    background-color: #1f1f1f;
+    color: white;
+    border: 0.4em solid #595959;
+}
+
+#cancel {
+    position: relative;
+    margin: 1em 1% 0;
+    width: 49%;
+    height: 3em;
+    float: left;
+    background-color: #d9d9d9;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 1.2em;
+}
+
+#cancel:hover {
+    background-color: #595959;
+    color: white;
+    border: 0.4em solid #d9d9d9;
+}
+
+/* Misc. formatting */
+
+form { /* Setting the form field blocks to respond with flex */
+    display: flex;
+    margin: 1.2em 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+form div { /* Basic formatting for the form divs. Not super set on this exact styling, but as more options get added it may look a bit better this way. */ 
+    width: 50%;
+}
+
+form h2 {
+    margin-top: 0;
+}
+
+/* Flex content */
+#flexMain { /* Main flex block CSS. */
+    width: 100%;
+    height: auto;
+    min-height: 30vh;
+    display: flex;
+    background-color: white;
+    border-radius: 1em;
+}
+
+#flexMain div { /* Formatting the blocks within the main flex block. These contents will not be modified by the js, with the exception of order affecting individual id's */
+    background-color: #1890ff;
+    color: white;
+    font-size: 3em;
+    margin: 0.25em;
+    width: auto;
+    min-width: 25%;
+    height: auto;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+/* Classes that will be added to the elements based upon the selected radios */
+
+.flexRow {
+    flex-direction: row;
+}
+
+.flexColumn {
+    flex-direction: column;
+}
+
+.flexStretch {
+    align-items: stretch;
+    -webkit-align-items: stretch;
+}
+
+.flexAlignCenter {
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+.flexAlignStart {
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+}
+
+.flexAlignEnd {
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+}
+
+.flexBaseline {
+    align-items: baseline;
+    -webkit-align-items: baseline;
+}
+
+.flexJustifyCenter {
+    justify-content: center;
+}
+
+.flexAround {
+    justify-content: space-around;
+}
+
+.flexBetween {
+    justify-content: space-between;
+}
+
+.flexJustifyStart {
+    justify-content: flex-start;
+}
+
+.flexJustifyEnd {
+    justify-content: flex-end;
+}
+
+.one {
+    order: 0;
+}
+
+.two {
+    order: 1;
+}
+
+.three {
+    order: 2;
+}
+
+/* Content body styling */
+section {
+    margin: 0.5em 0;
+}
+
+/* Tab styling */
+
+#tabs {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    background: #d9d9d9;
+    border-radius: 1em 1em 0 0;
+}
+
+#tabs a:hover {
+    cursor: pointer;
+    color: black;
+    background-color: #f5f5f5;
+}
+
+.tablinks {
+    padding: 1em;
+    min-height: 1.5em;
+    height: auto;
+    transition: 0.25s;
+    color: black;
+}
+
+.active {
+    background: white;
+}
+
+#defaultOpen {
+    border-radius: 1em 0 0 0;
+}
+
+/* Conclusion page stuff */
+#theCode img {
+    max-width: 100%;
+    max-height: 70vh;
+}
+
+.warning {
+    color: #eb2f96;
+}
+
+a {
+    text-decoration: none;
+    color: #1890ff;
+    transition: 0.25s
+}
+
+a:hover {
+    color: #0050b3;
+}
+
+#showMeTheCode {
+    position: relative;
+    margin: 1em auto;
+    min-width: 50%;
+    min-height: 3em;
+    color: white;
+    background-color: #c41d7f;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 1.2em;
+}
+
+#showMeTheCode:hover {
+    background-color: #ffadd2;
+    color: black;
+}

@@ -76,6 +76,7 @@ $(document).ready(function() {
         $("#three").removeClass();
         
         $("#flexMain").addClass("flexRow flexBaseline flexJustifyCenter"); // Adds the default classes to the main flex box
+        $("#flexMain").css("height","auto"); // Sets height back to auto, in case cancel is clicked after the direction is set to column
         
     });
 })

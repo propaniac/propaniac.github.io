@@ -1,1 +1,271 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GrC 452 Final</title>
 
+<!-- Font for styling -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+<style>
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #eeeeee;
+        margin: 2em auto;
+        width: 70vw;
+        max-width: 1280px;
+    }
+    
+    h1 {
+        text-align: center;
+        font-size: 1.5em;
+    }
+    
+    h2 {
+        font-size: 1.2em;
+    }
+    
+    b {
+        font-weight: 400;
+    }
+    
+    form {
+        line-height: 1.2;
+    }
+    
+    form label {
+        margin-left: 1em;
+    }
+    
+    #submit {
+        position: relative;
+        margin: 2em 0 1%;
+        width: 49%;
+        float: left;
+        height: 3em;
+        color: white;
+        background-color: #595959;
+        border: none;
+        border-radius: 8px;
+        transition: 0.3s;
+        font-size: 1.2em;
+    }
+    
+    #submit:hover {
+        background-color: #1f1f1f;
+        color: white;
+        border: 0.4em solid #595959;
+    }
+    
+    #cancel {
+        position: relative;
+        margin: 2em 1% 0;
+        width: 49%;
+        float: left;
+        height: 3em;
+        background-color: #d9d9d9;
+        border: none;
+        border-radius: 8px;
+        transition: 0.3s;
+        font-size: 1.2em;
+    }
+    
+    #cancel:hover {
+        background-color: #595959;
+        color: white;
+        border: 0.4em solid #d9d9d9;
+    }
+    
+    /* Misc. formatting */
+    
+    .total /*Section where order total prints */ {
+        text-align: center;
+    }
+    
+    form { /* Setting the form field blocks to respond with flex */
+        display: flex;
+        margin: 2em 0;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+    
+    form div { /* Basic formatting for the form divs. Not super set on this exact styling, but as more options get added it may look a bit better this way. */ 
+        width: 50%;
+        padding: 0.75em 0;
+    }
+    
+    /* Flex content */
+    #flexMain { /* Main flex block CSS. */
+        width: 100%;
+        height: auto;
+        min-height: 30vh;
+        display: flex;
+        background-color: white;
+        border-radius: 1em;
+    }
+    
+    #flexMain div { /* Formatting the blocks within the main flex block. These contents will not be modified by the js, with the exception of order affecting individual id's */
+        background-color: #1890ff;
+        color: white;
+        font-size: 3em;
+        margin: 0.25em;
+        width: auto;
+        min-width: 25%;
+        height: auto;
+        border-radius: 0.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+    }
+    
+    /* Classes that will be added to the elements based upon the selected radios */
+    
+    .flexRow {
+        flex-direction: row;
+    }
+    
+    .flexColumn {
+        flex-direction: column;
+    }
+    
+    .flexStretch {
+        align-items: stretch;
+        -webkit-align-items: stretch;
+    }
+    
+    .flexAlignCenter {
+        align-items: center;
+        -webkit-align-items: center;
+    }
+    
+    .flexAlignStart {
+        align-items: flex-start;
+        -webkit-align-items: flex-start;
+    }
+    
+    .flexAlignEnd {
+        align-items: flex-end;
+        -webkit-align-items: flex-end;
+    }
+    
+    .flexBaseline {
+        align-items: baseline;
+        -webkit-align-items: baseline;
+    }
+    
+    .flexJustifyCenter {
+        justify-content: center;
+    }
+    
+    .flexAround {
+        justify-content: space-around;
+    }
+    
+    .flexBetween {
+        justify-content: space-between;
+    }
+    
+    .flexJustifyStart {
+        justify-content: flex-start;
+    }
+    
+    .flexJustifyEnd {
+        justify-content: flex-end;
+    }
+    
+    .one {
+        order: 0;
+    }
+    
+    .two {
+        order: 1;
+    }
+    
+    .three {
+        order: 2;
+    }
+    
+    
+</style>
+</head>
+
+<body>
+    
+    <h1>GrC 452: Final</h1>
+    
+    <!-- Changes will be made for this main id and its classes based upon the checked radios -->
+    <section id="flexMain" class="flexRow flexBaseline flexJustifyCenter">
+        <!-- A class will be added to id each of these div's based upon the input in the order field -->
+        <div id="one" class="1">
+            <p>#1</p>
+        </div>
+        
+        <div id="two">
+            <p>#2</p>
+        </div>
+        
+        <div id="three">
+            <p>#3</p>
+        </div>
+    </section>
+    
+    <p>Demonstration of flex objects, with radio buttons to adjust various properties and values of the CSS flex object, as well as numeric input to adjust the contents of the flex object.</p>
+    
+    <!-- Form block for formatting purposes -->
+    <form id="myForm">
+        <div id="flexDirection">
+            <h2>Flex Direction</h2> <!-- Resource: https://www.w3schools.com/tags/att_input_type_radio.asp -->
+                <input type="radio" id="row" name="direction" value="row" checked>
+                <label for="row">Row</label><br>
+                <input type="radio" id="column" name="direction" value="column">
+                <label for="column">Column</label><br>
+        </div>
+        
+        <div id="flexJustification">
+            <h2>Flex Justification</h2> <!-- Resource: https://www.w3schools.com/tags/att_input_type_radio.asp -->
+                <input type="radio" id="justifyCenter" name="justify" value="justifyCenter" checked>
+                <label for="justifyCenter">Center</label><br>
+                <input type="radio" id="around" name="justify" value="around">
+                <label for="around">Space Around</label><br>
+                <input type="radio" id="between" name="justify" value="between">
+                <label for="between">Space Between</label><br>
+                <input type="radio" id="justifyStart"  value="justifyStart" name="justify">
+                <label for="justifyStart">Start</label><br>
+                <input type="radio" id="justifyEnd"  value="justifyEnd" name="justify">
+                <label for="justifyEnd">End</label><br>
+                
+        </div>
+        
+        <div id="flexAlignItems">
+            <h2>Flex Alignment</h2> <!-- Resource: https://www.w3schools.com/tags/att_input_type_radio.asp -->
+                <input type="radio" id="baseline"  value="baseline" name="align" checked>
+                <label for="baseline">Baseline</label><br>
+                <input type="radio" id="stretch"  value="stretch" name="align">
+                <label for="stretch">Stretch</label><br>
+                <input type="radio" id="alignCenter"  value="alignCenter" name="align">
+                <label for="alignCenter">Center</label><br>
+                <input type="radio" id="alignStart"  value="alignStart" name="align">
+                <label for="alignStart">Start</label><br>
+                <input type="radio" id="alignEnd"  value="alignEnd" name="align">
+                <label for="alignEnd">End</label><br>
+        </div>
+        
+        <div id="flexOrder">
+            <h2>Order</h2>
+                <label for="order">Position of block #1:</label>
+                <input type="number" id="order" name="order" value="1" min="1" max="3">
+                <!-- This isn't final, but I'm thinking this can define the placement of the "#1" block. I presume I will need to have code that converts the value into correct format, given that block #1 is position 0, #3 is 2, etc. -->
+        </div>
+    </form>
+    
+    <!-- Main buttons -->
+    <input type="button" id="cancel" value="Cancel Changes">
+    <input type="button" id="submit" value="Commit Changes">
+    
+    <!-- Script calls -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="final.js"></script>
+</body>
+</html>

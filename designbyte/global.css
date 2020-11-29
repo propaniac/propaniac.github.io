@@ -120,6 +120,9 @@ header {
 	width: 100%;
 	height: auto;
 	min-height: 2em;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 header a, #menu a {
@@ -147,13 +150,13 @@ header img:hover {
 
 #logo {
 	width: 240px;
+	justify-content: flex-start;
 }
 
 header a.icon {
-	position: absolute;
+	justify-content: flex-end;
+	margin-left: auto;
 	font-size: 2em;
-	right: 0;
-	top: 0;
 	height: 100%;
 }
 
@@ -220,6 +223,7 @@ button:hover {
 
 .termsHeading {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	flex-direction: row;
 	width: 100%;
@@ -236,6 +240,7 @@ button:hover {
 }
 
 #termList {
+	margin-top: 0.5em;
 	display: flex;
 }
 

@@ -1,0 +1,264 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}    
+
+/* End reset */
+
+/* Base formatting */
+
+* {
+	box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 14pt;
+	line-height: 1.7em;
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+	max-width: 720px;
+	background-color: #f5f5f5;
+	margin: 1em auto;
+	margin-top: 140px;
+}
+
+/* Text formatting */
+
+h1, h2, h3, h4, h5, h6, strong {
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 1.5em;
+	margin-bottom: 0.2em;
+}
+
+h2 {
+	font-size: 1.4em;
+}
+h3 { 
+	font-size: 1.25em;
+}
+
+h4 {
+	font-size: 1.1em;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+a {
+	color: #061178;
+	text-decoration: none;
+	transition: 0.25s;
+}
+
+a:hover {
+	color: #597ef7;
+	text-decoration: underline;
+}
+
+/* Main navigational elements */
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	overflow: hidden;
+	background-color: #d9d9d9;
+	width: 100%;
+	height: auto;
+	min-height: 2em;
+}
+
+header a, #menu a {
+	color: #061178;
+	font-size: 1.25em;
+	transition: 0.25s;
+	text-decoration: none;
+	display: block;
+	padding: 1em;
+	width: auto;
+}
+
+header a:hover, #menu a:hover {
+	color: #597ef7;
+}
+
+header img {
+	width: 240px;
+	transition: 0.25s;
+}
+
+header img:hover {
+	filter: brightness(2);
+}
+
+#logo {
+	width: 240px;
+}
+
+header a.icon {
+	position: absolute;
+	font-size: 2em;
+	right: 0;
+	top: 0;
+	height: 100%;
+}
+
+header a.icon:hover {
+	color: #262626 !important;
+}
+
+#menu {
+	position: fixed;
+	right: 0;
+	top: 110px;
+	z-index: 9;
+	overflow: hidden;
+	background-color: #d9d9d9;
+	border-radius: 0 0 0 1em;
+	width: 100%;
+	max-width: 480px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#headerMenuLinks {
+	display: none;
+	margin: 1em 0;
+}
+
+#menu p {
+	font-size: 1.25em;
+	margin: 1em;
+}
+
+#menu a:hover {
+	text-decoration: underline;
+}
+
+#menu li {
+	margin-left: 1.5em;
+}
+
+button {
+	display: block;
+	position: relative;
+    width: auto;
+    height: 2em;
+    color: #f5f5f5;
+    background-color: #061178;
+    border: none;
+    border-radius: 0.5em;
+    transition: 0.3s;
+    font-size: 1.2em;
+}
+
+button i {
+	padding: 0 0.5em;
+}
+
+button:hover {
+	background-color: #2f54eb;
+/*    border: 0.4em solid #d9d9d9; */
+}
+
+/* Term list classes */
+
+.termsHeading {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	width: 100%;
+}
+
+.termsHeading h2 {
+	justify-content: flex-start;
+}
+
+.termsHeading button {
+	justify-content: flex-end;
+	margin-left: auto;
+	margin-right: 1em;
+}
+
+#termList {
+	display: flex;
+}
+
+.flexList {
+	flex-direction: column;
+}
+
+.flexCard {
+	flex-direction: row;
+	flex-flow: wrap;
+	justify-content: center;
+	flex: 1;
+}
+
+.list {
+	border-bottom: 0.4em solid #d9d9d9;
+	padding-top: 0.5em;
+	width: 100%;
+}
+
+.card {
+	background-color: #d9d9d9;
+	border-radius: 1em;
+	padding: 1em;
+	margin: 1em;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>designbyte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="global.css">
+    <script src="https://kit.fontawesome.com/d0b8b62b75.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" id="logo"><img src="images/designbyte_retina.png" alt="Design Byte logo, with design in a dark blue regular font and byte in a dark gray and bold font"></a>
+        <a href="javascript:void(0);" class="icon" onclick="headerMenu()">
+                <i class="fa fa-bars"></i>
+        </a>
+    </header>
+    <div id="menu">
+            <div id="headerMenuLinks">
+                <a href="/index.html">Home</a>
+                <p>Term Pages</p>
+                <ul>
+                    <li><a href="/index.html">Term</a></li>
+                    <li><a href="/index.html">Term</a></li>
+                    <li><a href="/index.html">Term</a></li>
+                </ul>
+                <a href="/contact.html">Contact</a>
+                <a href="/about.html">About</a>
+            </div>
+    </div>
+
+    <section id="">
+    </section>
+
+
+    <!-- Script calls -->
+    <script src="/js/main.js"></script>
+</body>

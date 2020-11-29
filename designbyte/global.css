@@ -262,3 +262,12 @@ button:hover {
 	padding: 1em;
 	margin: 1em;
 }
+
+/* Breakpoints */
+
+@media only screen and (max-width: 720px) {
+
+	body {
+		padding: 1em;
+	}
+}

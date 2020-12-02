@@ -35,80 +35,118 @@
 
     <section role="main" aria-label="Main page contents" id="landing">
         <h1>Accessibilty</h1>
-
-        <p>Accessibility in a system refers to how usable a system is for a user. There are many types of users out there and no two are exactly alike — some users have perfectly adequate vision while others do not, some users operate a system using a standard mouse and keyboard while others are not afforded the same dexterity to be able to operate with these standard tools. It is important to consider all sorts of users when making design decisions. In this page we will focus on two major sets of impairments, <em>physical</em> and <em>visual</em>, and how they should be considered in designing an interface.</p>
+            <p>Accessibility in a system refers to how usable a system is for a user. There are many types of users out there and no two are exactly alike — some users have perfectly adequate vision while others do not, some users operate a system using a standard mouse and keyboard while others are not afforded the same dexterity to be able to operate with these standard tools. It is important to consider all sorts of users when making design decisions. In this page we will focus on two major sets of impairments, <em>physical</em> and <em>visual</em>, and how they should be considered in designing an interface.</p>
 
         <h2>Why should I care about accessibility</h2>
-
-        <p>Because no two users will use a system in the exact same manner, it should at least be possible for all users to have the same experience using a system or not be impeded by it. A very common impairment to consider is vision: many users have different settings for their text sizes on a device, and it is important to consider this when creating a system. If a system is only designed with the standard text sizes in mind, the experience a user may have while using larger text settings will likely suffer. A system should be adaptable to any type of user</p>
+            <p>Because no two users will use a system in the exact same manner, it should at least be possible for all users to have the same experience using a system or not be impeded by it. A very common impairment to consider is vision: many users have different settings for their text sizes on a device, and it is important to consider this when creating a system. If a system is only designed with the standard text sizes in mind, the experience a user may have while using larger text settings will likely suffer. A system should be adaptable to any type of user</p>
 
         <h2>Physical Impairments and Keyboard Navigation</h2>
 
-        <p>Not all users have the same physical capabilities. Some users cannot use a mouse and must use modified keyboard arrangements to utilize a computer system.</p>
+                <p>Not all users have the same physical capabilities. Some users cannot use a mouse and must use modified keyboard arrangements to utilize a computer system.</p>
 
-        <p>When using or designing a system, it is interesting and important to test it with keyboard navigation in mind. Without any additional changes to settings, most webpages can be operated with just a keyboard using the Tab key to navigate between interactable elements and Space or Enter to select the object.</p>
+                <p>When using or designing a system, it is interesting and important to test it with keyboard navigation in mind. Without any additional changes to settings, most webpages can be operated with just a keyboard using the Tab key to navigate between interactable elements and Space or Enter to select the object.</p>
 
-        <section role="complementary" aria-label="Section for interactive examples related to the content" id="keyboard-example">
+                <section role="complementary" aria-label="Section for interactive examples related to the content" id="keyboard-example">
 
-            <p>Let's experiment with the following elements. Select the first text box, enter data if you would like, and try tabbing through the objects and using the form without your mouse.</p>
-            
-            <blockquote id="keyboard-taborder-bad" aria-label="Example of bad tab order on elements">
+                    <p>Let's experiment with the following elements. Select the first text box, enter data if you would like, and try tabbing through the objects and using the form without your mouse.</p>
+                    
+                    <blockquote id="keyboard-taborder-bad" aria-label="Example of bad tab order on elements">
 
-                <form name="contact_form-bad">
-                    <p style="padding: 24px 0 0 0; font-weight: 700;">What's your email?</p>
-                    <input type="text" tabindex="1" id="email_address" placeholder="email@designbyte.org"/>
-                    <p style="padding: 8px 0 0 0; font-weight: 700;">What is the message you would like to send me?</p>
-                    <textarea placeholder="Hello, designbyte team!" tabindex="-1" ></textarea>
-                    <input name="Send" type="submit" value="Send" tabindex="2">
-                </form>
-            
-            </blockquote>
+                        <form name="contact_form-bad">
+                            <p style="padding: 24px 0 0 0; font-weight: 700;">What's your email?</p>
+                            <input type="text" tabindex="1" id="email_address" placeholder="email@designbyte.org"/>
+                            <p style="padding: 8px 0 0 0; font-weight: 700;">What is the message you would like to send me?</p>
+                            <textarea placeholder="Hello, designbyte team!" tabindex="-1" ></textarea>
+                            <input name="Send" type="submit" value="Send" tabindex="2">
+                        </form>
+                    
+                    </blockquote>
 
-            <p>Note that the tab order does not allow the user to navigate to the second element in the form and skips straight to the Send button. While this may only be a mild irritant to a user who uses mouse and keyboard for navigation, consider a user with one functional hand who is only able to use a keyboard for navigation — they are unable to access this element.</p>
+                    <p>Note that the tab order does not allow the user to navigate to the second element in the form and skips straight to the Send button. While this may only be a mild irritant to a user who uses mouse and keyboard for navigation, consider a user with one functional hand who is only able to use a keyboard for navigation — they are unable to access this element.</p>
 
-            <p>It is vital that proper tab orders are set for elements on a page, or else a user who is limited to keyboard navigation cannot navigate the page appropriately — a violation of accessibility.</p>
+                    <p>It is vital that proper tab orders are set for elements on a page, or else a user who is limited to keyboard navigation cannot navigate the page appropriately — a violation of accessibility.</p>
 
-        </section>
+                </section>
 
         <h2>Visual Impairments</h2>
 
-        <p>Given that web interfaces are primarily a visual medium, it's important to consider that not all vision is the same. Whether it be color deficiencies or visual impairments, it is important to consider that many users may suffer issues related to vision and that systems should be designed with this in mind.</p>
+            <p>Given that web interfaces are primarily a visual medium, it's important to consider that not all vision is the same. Whether it be color deficiencies or more severe visual impairments, it is important to consider that many users may suffer issues related to vision and that systems should be designed with this in mind.</p>
 
-        <h3>Screenreaders</h3>
-        <p>Screenreading technology is necessary for some users to navigate a page, due to low or otherwise severely impaired vision. There are a variety of things that must be integrated into a system in order to accommodate screenreading technology well.</p>
+            <h3>Screenreaders</h3>
+                <p>Screenreading technology is necessary for some users to navigate a page, due to low or otherwise severely impaired vision. There are a variety of things that must be integrated into a system in order to accommodate screenreading technology well.</p>
 
-        <h4>Wayfinding and labels with screenreaders</h4>
-        <p>Some major issues when it comes to accommodating screenreaders stems from text labels and wayfinding. With webpages, it is common that there are many hidden elements on a page or some things added for stylistic purposes, which, in turn, can sometimes be seen by a screenreader. This is problematic as it can cause confusion about a system for such a user.</p>
+                <h4>Wayfinding and labels with screenreaders</h4>
+                    <p>Some major issues when it comes to accommodating screenreaders stems from text labels and wayfinding. With webpages, it is common that there are many hidden elements on a page or some things added for stylistic purposes, which, in turn, can sometimes be seen by a screenreader. This is problematic as it can cause confusion about a system for such a user.</p>
 
-        <p>It is possible to add labels to elements that offer more in-depth information about the element or why it is there. HTML has a variety of choices with regard to the frames that are used for elements, such as <em>p</em> for paragraphs or <em>div</em> for general purposes. The issue with some frames, like <em>div</em>, is that they do not offer very much information to screenreaders about the contents. With the various versions of HTML, semantic names for frames have been added, like <em>header</em> for header elements, and these offer more information to the screenreader about the contents.</p>
+                    <p>It is possible to add labels to elements that offer more in-depth information about the element or why it is there. HTML has a variety of choices with regard to the frames that are used for elements, such as <em>p</em> for paragraphs or <em>div</em> for general purposes. The issue with some frames, like <em>div</em>, is that they do not offer very much information to screenreaders about the contents. With the various versions of HTML, semantic names for frames have been added, like <em>header</em> for header elements, and these offer more information to the screenreader about the contents.</p>
 
-        <p>To combat the issues with non-semantic frames, like <em>div</em>, we can add labels that will offer more information to the screenreader and aid the user with proper wayfinding. The addition of <strong>ARIA</strong> (Accessible Rich Internet Applications) attributes allows for the addition of more information for a screenreader to give a user for non-semantic or primarily visual elements.</p>
+                    <p>To combat the issues with non-semantic frames, like <em>div</em>, we can add labels that will offer more information to the screenreader and aid the user with proper wayfinding. The addition of <strong>ARIA</strong> (Accessible Rich Internet Applications) attributes allows for the addition of more information for a screenreader to give a user for non-semantic or primarily visual elements.</p>
 
-        <img src="images/accessibility/aria_progress_bar.png" alt="A screenshot of content from Firefox's ARIA documentation page. It shows a snippet of coad for a progress bar element, with various additional labels to help screenreaders. The content reads as follows: Here's the markup for a progress bar widget. open div id=percent-loaded role=progressbar aria-valuenow=75 aria-valuemin=0 aria-valuemax=100 end div">
+                    <img src="images/accessibility/aria_progress_bar.png" alt="A screenshot of content from Firefox's ARIA documentation page. It shows a snippet of coad for a progress bar element, with various additional labels to help screenreaders. The content reads as follows: Here's the markup for a progress bar widget. open div id=percent-loaded role=progressbar aria-valuenow=75 aria-valuemin=0 aria-valuemax=100 end div">
 
-        <blockquote>
-            <p>The above image shows an example from the Mozilla developer page for ARIA, which shows a div with various ARIA attributes added for additional information.</p>
-            <p>"<em>This progress bar is built using a [div], which has no meaning. Unfortunately, there isn't a more semantic tag available to developers in HTML 4, so we need to include ARIA roles and properties. These are specified by adding attributes to the element. In this example, the role="progressbar" attribute informs the browser that this element is actually a JavaScript-powered progress bar widget. The aria-valuemin and aria-valuemax attributes specify the minimum and maximum values for the progress bar, and the aria-valuenow describes the current state of it and therefore must be kept updated with JavaScript.</em>"</p>
-            <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">Mozilla MDN web docs: ARIA</a></p>
-        </blockquote>
+                    <blockquote>
+                        <p>The above image shows an example from the Mozilla developer page for ARIA, which shows a div with various ARIA attributes added for additional information.</p>
+                        <p>"<em>This progress bar is built using a [div], which has no meaning. Unfortunately, there isn't a more semantic tag available to developers in HTML 4, so we need to include ARIA roles and properties. These are specified by adding attributes to the element. In this example, the role="progressbar" attribute informs the browser that this element is actually a JavaScript-powered progress bar widget. The aria-valuemin and aria-valuemax attributes specify the minimum and maximum values for the progress bar, and the aria-valuenow describes the current state of it and therefore must be kept updated with JavaScript.</em>"</p>
+                        <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">Mozilla MDN web docs: ARIA</a></p>
+                    </blockquote>
 
-        <p>Thus, labels should be used diligently for elements in order to maintain proper wayfinding for users with screenreaders, especially when non-semantic identifiers are used.</p>
+                    <p>Thus, labels should be used diligently for elements in order to maintain proper wayfinding for users with screenreaders, especially when non-semantic identifiers are used.</p>
 
-        <h4>Images and screenreaders</h4>
-        <p>On a similar note users with severe visual impairments cannot see images in the same manner as other users. It is important to consider this when using images as a navigational element or as a decorative element. With webpages, using proper alternative text for the images is necessary in ensuring a visually impaired user is able to gather the same information from it as an otherwise normal user.</p>
+                <h4>Images and screenreaders</h4>
+                    <p>On a similar note users with severe visual impairments cannot see images in the same manner as other users. It is important to consider this when using images as a navigational element or as a decorative element. With webpages, using proper alternative text for the images is necessary in ensuring a visually impaired user is able to gather the same information from it as an otherwise normal user.</p>
 
-        <p>Per <a href="https://www.usability.gov/what-and-why/accessibility.html">usability.gov's Accessibility Basics page</a>, they state that we <em>. . . should include Alt text in the markup/code; complex images should have more extensive descriptions near the image</em>. The following shows some examples of good and bad practices for alternative text.</p>
+                        <p>Per <a href="https://www.usability.gov/what-and-why/accessibility.html">usability.gov's Accessibility Basics page</a>, they state that we <em>. . . should include Alt text in the markup/code; complex images should have more extensive descriptions near the image</em>. The following shows some examples of good and bad practices for alternative text.</p>
 
-        <blockquote>
+                        <blockquote>
+                            <img src="/images/designbyte_retina.png" alt="Design Byte logo, with design in a dark blue regular font and byte in a dark gray and bold font">
 
-            <img src="/images/designbyte_retina.png" alt="Design Byte logo, with design in a dark blue regular font and byte in a dark gray and bold font">
+                            <p>Consider the logo for this site, seen in the header and just above here. This is an image which resembles text, and a screenreader normally would not recognize it as such. All that the screenreader would tell a user is the alt data in the HTML.</p>
 
-            <p>Consider the logo for this site, seen in the header and just above here. This is an image which resembles text, and a screenreader normally would not recognize it as such. All that the screenreader would tell a user is the alt data in the HTML.</p>
+                            <p>It is never acceptable to simply add "<em>logo</em>" or nothing for the alt data, as the screenreader would not tell the user any helpful information about the image.</p>
 
-            <p>It is never acceptable to simply add "<em>logo</em>" or nothing for the alt data, as the screenreader would not tell the user any helpful information about the image.</p>
+                            <p>Better alt data for such an image would be something like this: "<em>The Design Byte logo, with design in a dark blue regular font and byte in a dark gray and bold font</em>." This informs the user to what the contents of the image in a descriptive manner, offering similar information to viewing the image.</p>
+                </blockquote>
 
-            <p>Better alt data for such an image would be something like this: "<em>The Design Byte logo, with design in a dark blue regular font and byte in a dark gray and bold font</em>." This informs the user to what the contents of the image in a descriptive manner, offering similar information to viewing the image.</p>
-        </blockquote>
+                <p>There are a variety of things to consider with regard to screenreaders and designing systems for accommodating them, and these are just a few. Additional information and resources that can even further develop on these topics will be found below.</p>
+
+        <h2>Color Deficiencies</h2>
+            <p>Color deficiencies or color blindness refers to issues related to perception of colors. Per <a href="https://www.colourblindawareness.org/colour-blindness/">colourblindawareness.org</a>, approximately 8% of men suffer from color deficiency. It is far less common for women to suffer from the issue, but with the 8% of men, alone, this is far too large of a population to ignore.</p>
+
+            <p>The most common forms of color deficiencies are with relation to the perception of red and green, with around 6% of the men suffering from one of the two varieties of red-green color deficiencies, per <a href="https://www.color-blindness.com/types-of-color-blindness/">color-blindness.com</a>. This means that using red and green to contrast one another in a system could be problematic for a vast number of potential users.</p>
+
+            <p>Take a moment to view the following buttons.</p>
+
+            <blockquote>
+                <div class="button-group" aria-label="A group of buttons, for confirming or cancelling a process">
+                    <button class="red">Cancel</button>
+                    <button class="green">Confirm</button>
+                </div>
+            </blockquote>
+
+            <p>While this may be commonplace and these colors are widely agreed to be indicators of these actions, this is a hard sight to view for those with color deficiencies.</p>
+
+            <blockquote>
+                <div class="button-group" aria-label="A group of buttons, for confirming or cancelling a process">
+                    <button class="red">Cancel</button>
+                    <button class="red">Confirm</button>
+                </div>
+            </blockquote>
+
+            <p>This is how such a set of buttons would be seen for someone affected by a <em>deuter</em> type of color deficiency, which makes up 5% of the 8% of men with colorblindness, per <a href="https://www.color-blindness.com/types-of-color-blindness/">color-blindness.com</a>.</p>
+
+            <blockquote>
+                    <div class="button-group" aria-label="A group of buttons, for confirming or cancelling a process">
+                        <button class="green">Cancel</button>
+                        <button class="green">Confirm</button>
+                    </div>
+            </blockquote>
+
+            <p>And this is how the button set would be perceived by someone affected by a <em>protan</em> type of color deficiency. While this only affects 1% of the overall 8% of colorblind men (<a href="https://www.color-blindness.com/types-of-color-blindness/">color-blindness.com</a>), alongside the other 5% with issues perceiving red and green incorrectly this does make up a large sum of people.</p>
+
+            <h3>Additional Considerations for Color Deficiencies</h3>
+                <p>Given the manner in which color deficiencies work, there are a few lesser considered problems that come with the issue. Color deficiencies affect the strength of the rod to perceive whichever color is problematic, mainly when differentiating it with other colors. This can be particularly problematic in the realm of display technology, like computer monitors.</p>
+
+                <p>In the case of <em>protan</em> color deficiencies, this manifests with pure red on white backgrounds. Consider that red is the pixel activating the red light at 100% capability and white is red, green, and blue at 100%. With a weaker perception of red, there is difficulty with things such as red text being perceived as red when contrasted on a light background.</p>
 
         <h2>Resources</h2>
 

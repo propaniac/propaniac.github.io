@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>designbyte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="global.css">
+    <script src="https://kit.fontawesome.com/d0b8b62b75.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header role="banner">
+        <a href="index.html" id="logo"><img src="images/designbyte_retina.png" alt="Design Byte logo, with design in a dark blue regular font and byte in a dark gray and bold font"></a>
+        <a href="javascript:void(0);" class="icon" onclick="headerMenu()" role="navigation" aria-label="Menu toggle will show and hide a navigational link list">
+                <i class="fa fa-bars"></i>
+        </a>
+    </header>
+    <nav role="navigation" id="menu">
+        <div aria-label="Main navigational link list" id="headerMenuLinks">
+            <a href="index.html">Home</a>
+            <p>Term Pages</p>
+            <ul>
+                <li><a href="accessibility.html">Accessibility: Introduction</a></li>
+                <li><a href="accessibility-sectionOne.html">Accessibility: Physical Impairments</a></li>
+                <li><a href="accessibility-sectionTwo.html">Accessibility: Visual Impairments</a></li>
+                <li><a href="accessibility-conclusion.html">Accessibility: Conclusions and Resources</a></li>
+                <li><a href="index.html">Term</a></li>
+                <li><a href="index.html">Term</a></li>
+            </ul>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <section>
+
+        <h1>Conclusions and Additional Resources</h1>
+
+        <p>This wraps up just a few instances where accessibility accommodations should influence design decisions. There are a wide array of resources out there which can aid with making decisions related to accessibility and usability, which will be detailed below. In the end, not only does the system end up being more usable for average users, but it can reach and be better utilized by all.</p>
+
+        <h2>Resources</h2>
+
+        <p>Whether it be testing tools or design tools, there are many systems out there which can assist with making sure a system is accessible from the start.</p>
+
+        <h3>Mozilla Firefox Accessibility Inspector</h3>
+        <p>Mozilla Firefox has recently pushed a suite of tools for accessibility testing into the browser. After Firefox version 79, an Accessibility Inspector functionality was enabled by default in web developer tools (i.e. Inspect Element). This functionality is useful in many cases, and being that it is native functionality there is no reason not to use it.</p>
+
+        <img src="https://media.prod.mdn.mozit.cloud/attachments/2018/06/06/16028/5c6862a4cc2a604edad8f0fcdc35a7c1/web-page-context-menu.png" alt="An image showing the Inspect Accessibility Properties button as displayed in the right-click context menu on a webpage in the Firefox browser.">
+
+        <blockquote><p>After version 79 of Firefox, the <em>Inspect Accessibility Properties</em> is available within the right-click context menu for any webpage on the Mozilla Firefox browser. This will open the standard developer tools panel for the browser, focussed on the Accessibility pane.</p>
+        <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector">Mozilla MDN web docs: Accessibility Inspector Tools</a></p></blockquote>
+
+        <p>The functionality offers automated and manual checks for various types of issues. The issue types cover <strong>Contrast</strong> for visual impairments and general visual issues, <strong>Keyboard</strong> for navigating a page with keyboard controls, and <strong>Labels</strong> for visual impairments requiring screenreaders</p>
+
+        <img src="images/accessibility/firefox_all_accessibility_issues_automated.png" alt="A screenshot showing the open Check For Issues menu of the Accessibility tab in the developer tools pane. Options include filters for None, All, Contrast, Keyboard, and Label issues types, flagged automatically by the browser.">
+
+        <blockquote><p>The automated accessibility checks are able to be filtered by the various types of issues that the browser flags.</p></blockquote>
+
+        <p>On top of offering the ability to assess a system’s colors and contrast for visual design, it offers tools to evaluate the tab order for objects, as is important for using keyboard controls with some impairments.</p>
+
+        <img src="https://media.prod.mdn.mozit.cloud/attachments/2020/11/19/17440/52a744b03e4b8401b322aaee55bdeee4/Accessibility-Inspector-show_tab_order.png" alt="A screenshot of a webpage being accessed using the Show Tabbing Order function in Firefox’s Accessibility Inspector. The page shows the order with which the objects will be navigated to when using the Tab key, with the currently selected element being highlighted.">
+
+        <blockquote><p>The Accessibility Inspector also offers a toggle to display the tab order for the current page. This is especially helpful for testing with keyboard navigation in mind.</p>
+        <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector">Mozilla MDN web docs: Accessibility Inspector Tools</a></p></blockquote>
+
+        <p>Additional information on the functionality can be found on the <a href="https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector">Mozilla MDN web docs: Accessibility Inspector Tools</a> page.</p>
+
+    </section>
+
+    <footer>
+        <a id="previous" href="accessibility.html" aria-label="Previous section navigation"><i class="fas fa-arrow-left"></i></a>
+        <p aria-label="Current page indicator">Accessibility: Introduction</p>
+        <a id="next" class="disabled" aria-label="Next section navigation"><i class="fas fa-arrow-right"></i></a>
+    </footer>
+
+    <!-- Script calls -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>

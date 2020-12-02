@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>designbyte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="global.css">
+    <script src="https://kit.fontawesome.com/d0b8b62b75.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header role="banner">
+        <a href="index.html" id="logo"><img src="images/designbyte_retina.png" alt="Design Byte logo, with design in a dark blue regular font and byte in a dark gray and bold font"></a>
+        <a href="javascript:void(0);" class="icon" onclick="headerMenu()" role="navigation" aria-label="Menu toggle will show and hide a navigational link list">
+                <i class="fa fa-bars"></i>
+        </a>
+    </header>
+    <nav role="navigation" id="menu">
+        <div aria-label="Main navigational link list" id="headerMenuLinks">
+            <a href="index.html">Home</a>
+            <p>Term Pages</p>
+            <ul>
+                <li><a href="accessibility.html">Accessibility: Introduction</a></li>
+                <li><a href="accessibility-sectionOne.html">Accessibility: Physical Impairments</a></li>
+                <li><a href="accessibility-sectionTwo.html">Accessibility: Visual Impairments</a></li>
+                <li><a href="accessibility-conclusion.html">Accessibility: Conclusions and Resources</a></li>
+                <li><a href="index.html">Term</a></li>
+                <li><a href="index.html">Term</a></li>
+            </ul>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <section>
+
+            <h1>Accessibility Section 2: Visual Impairments</h1>
+
+            <p>Given that web interfaces are primarily a visual medium, it's important to consider that not all vision is the same. Whether it be color deficiencies or more severe visual impairments, it is important to consider that many users may suffer issues related to vision and that systems should be designed with this in mind.</p>
+
+            <h2>Screenreaders</h2>
+                <p>Screenreading technology is necessary for some users to navigate a page, due to low or otherwise severely impaired vision. There are a variety of things that must be integrated into a system in order to accommodate screenreading technology well.</p>
+
+                <h3>Wayfinding and labels with screenreaders</h3>
+                    <p>Some major issues when it comes to accommodating screenreaders stems from text labels and wayfinding. With webpages, it is common that there are many hidden elements on a page or some things added for stylistic purposes, which, in turn, can sometimes be seen by a screenreader. This is problematic as it can cause confusion about a system for such a user.</p>
+
+                    <p>It is possible to add labels to elements that offer more in-depth information about the element or why it is there. HTML has a variety of choices with regard to the frames that are used for elements, such as <em>p</em> for paragraphs or <em>div</em> for general purposes. The issue with some frames, like <em>div</em>, is that they do not offer very much information to screenreaders about the contents. With the various versions of HTML, semantic names for frames have been added, like <em>header</em> for header elements, and these offer more information to the screenreader about the contents.</p>
+
+                    <p>To combat the issues with non-semantic frames, like <em>div</em>, we can add labels that will offer more information to the screenreader and aid the user with proper wayfinding. The addition of <strong>ARIA</strong> (Accessible Rich Internet Applications) attributes allows for the addition of more information for a screenreader to give a user for non-semantic or primarily visual elements.</p>
+
+                    <img src="images/accessibility/aria_progress_bar.png" alt="A screenshot of content from Firefox's ARIA documentation page. It shows a snippet of coad for a progress bar element, with various additional labels to help screenreaders. The content reads as follows: Here's the markup for a progress bar widget. open div id=percent-loaded role=progressbar aria-valuenow=75 aria-valuemin=0 aria-valuemax=100 end div">
+
+                    <blockquote>
+                        <p>The above image shows an example from the Mozilla developer page for ARIA, which shows a div with various ARIA attributes added for additional information.</p>
+                        <p>"<em>This progress bar is built using a [div], which has no meaning. Unfortunately, there isn't a more semantic tag available to developers in HTML 4, so we need to include ARIA roles and properties. These are specified by adding attributes to the element. In this example, the role="progressbar" attribute informs the browser that this element is actually a JavaScript-powered progress bar widget. The aria-valuemin and aria-valuemax attributes specify the minimum and maximum values for the progress bar, and the aria-valuenow describes the current state of it and therefore must be kept updated with JavaScript.</em>"</p>
+                        <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">Mozilla MDN web docs: ARIA</a></p>
+                    </blockquote>
+
+                    <p>Thus, labels should be used diligently for elements in order to maintain proper wayfinding for users with screenreaders, especially when non-semantic identifiers are used.</p>
+
+                <h3>Images and screenreaders</h3>
+                    <p>On a similar note users with severe visual impairments cannot see images in the same manner as other users. It is important to consider this when using images as a navigational element or as a decorative element. With webpages, using proper alternative text for the images is necessary in ensuring a visually impaired user is able to gather the same information from it as an otherwise normal user.</p>
+
+                        <p>Per <a href="https://www.usability.gov/what-and-why/accessibility.html">usability.gov's Accessibility Basics page</a>, they state that we <em>. . . should include Alt text in the markup/code; complex images should have more extensive descriptions near the image</em>. The following shows some examples of good and bad practices for alternative text.</p>
+
+                        <img src="images/designbyte_retina.png" alt="Design Byte logo, with design in a dark blue regular font and byte in a dark gray and bold font">
+
+                        <p>Consider the logo for this site, seen in the header and just above here. This is an image which resembles text, but a screenreader normally would not recognize it as such. All that the screenreader would tell a user is the <em>alt</em> data in the HTML. Let's write some alt data for the image.</p>
+
+                        <blockquote>
+                            <p><em>alt="logo"</em></p>
+                        </blockquote>
+
+                        <p>While this is certainly a start, it is by no means good. The screenreader would tell the user that there's an image of "logo" here and nothing else. We can do better.</p>
+
+                        <blockquote>
+                                <p><em>alt="The Design Byte logo, with design in a dark blue regular font and byte in a dark gray and bold font."</em></p>
+                        </blockquote>
+
+                        <p>This is much better. This informs the user the contents of the image in a descriptive manner, offering similar information to viewing the image. If a screenreader read this, it would give a much better idea of what the image is.</p>
+
+                <p>There are a variety of things to consider with regard to screenreaders and designing systems for accommodating them, and these are just a few. Additional information and resources that can even further develop on these topics will be found in the next page.</p>
+
+        <h2>Color Deficiencies</h2>
+            <p>Color deficiencies or color blindness refers to issues related to perception of colors. Per <a href="https://www.colourblindawareness.org/colour-blindness/">colourblindawareness.org</a>, approximately 8% of men suffer from color deficiency. It is far less common for women to suffer from the issue, but with the 8% of men, alone, this is far too large of a population to ignore.</p>
+
+            <p>The most common forms of color deficiencies are with relation to the perception of red and green, with around 6% of the men suffering from one of the two varieties of red-green color deficiencies, per <a href="https://www.color-blindness.com/types-of-color-blindness/">color-blindness.com</a>. This means that using red and green to contrast one another in a system could be problematic for a vast number of potential users.</p>
+
+            <p>Take a moment to view the following buttons.</p>
+
+            <blockquote>
+                <div class="button-group" aria-label="A group of buttons, for confirming or cancelling a process">
+                    <button class="red">Cancel</button>
+                    <button class="green">Confirm</button>
+                </div>
+            </blockquote>
+
+            <p>While this may be commonplace and these colors are widely agreed to be indicators of these actions, this is a hard sight to view for those with color deficiencies. Why is that?</p>
+
+            <blockquote>
+                <div class="button-group" aria-label="A group of buttons, for confirming or cancelling a process">
+                    <button class="red">Cancel</button>
+                    <button class="red">Confirm</button>
+                </div>
+            </blockquote>
+
+            <p>This is how such a set of buttons would be seen for someone affected by a <em>deuter</em> type of color deficiency, which makes up 5% of the 8% of men with colorblindness, per <a href="https://www.color-blindness.com/types-of-color-blindness/">color-blindness.com</a>.</p>
+
+            <blockquote>
+                    <div class="button-group" aria-label="A group of buttons, for confirming or cancelling a process">
+                        <button class="green">Cancel</button>
+                        <button class="green">Confirm</button>
+                    </div>
+            </blockquote>
+
+            <p>And this is how the button set would be perceived by someone affected by a <em>protan</em> type of color deficiency. While this only affects 1% of the overall 8% of colorblind men (<a href="https://www.color-blindness.com/types-of-color-blindness/">color-blindness.com</a>), alongside the other 5% with issues perceiving red and green incorrectly this does make up a large sum of people.</p>
+
+            <p>So it is important to avoid using problematic colors, like red and green, to represent contrast between options.</p>
+
+            <blockquote>
+                    <div class="button-group" aria-label="A group of buttons, for confirming or cancelling a process">
+                        <button class="cancel">Cancel</button>
+                        <button>Confirm</button>
+                    </div>
+            </blockquote>
+
+            <p>Instead, consider having the primary action or confirmation button match the branding of the system, while the secondary action or cancel button uses a grayscale coloration, like dark gray for a light background or light gray for a dark background. This conveys the same sort of concept, but without using problematic pairs of colors.</p>
+
+            <h3>Additional Considerations for Color Deficiencies</h3>
+                <p>Given the manner in which color deficiencies work, there are a few lesser considered problems that come with the issue. Color deficiencies affect the strength of the rod to perceive whichever color is problematic, mainly when differentiating it with other colors. This can be particularly problematic in the realm of display technology, like computer monitors.</p>
+
+                <p>In the case of <em>protan</em> color deficiencies, this manifests with pure red on white backgrounds. Consider that red is the pixel activating the red light at 100% capability and white is red, green, and blue at 100%. With a weaker perception of red, there is difficulty with things such as red text being perceived as red when contrasted on a light background.</p>
+
+                <blockquote>
+
+                    <p class="red-text">Am I red?</p>
+
+                    <p>Maybe to some people, but not to all people.</p>
+
+                    <p class="green-text">Am I at least green?</p>
+
+                    <p>The majority of color deficient people may not see green there, either.</p>
+
+                </blockquote>
+            
+                <p>Thus, it is important to avoid using things such as 100% red (i.e. #ff0000) or 100% green (i.e. #00ff00) to contrast with other text. See the resources in the next page for some suggestions on how to best select colors.</p>
+    </section>
+
+    <footer>
+        <a id="previous" href="accessibility-sectionOne.html" aria-label="Previous section navigation"><i class="fas fa-arrow-left"></i></a>
+        <p aria-label="Current page indicator">Accessibility: Introduction</p>
+        <a id="next" href="accessibility-conclusion.html" aria-label="Next section navigation"><i class="fas fa-arrow-right"></i></a>
+    </footer>
+
+    <!-- Script calls -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>

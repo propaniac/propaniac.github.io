@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>designbyte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="global.css">
+    <script src="https://kit.fontawesome.com/d0b8b62b75.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header role="banner">
+        <a href="index.html" id="logo"><img src="images/designbyte_retina.png" alt="Design Byte logo, with design in a dark blue regular font and byte in a dark gray and bold font"></a>
+        <a href="javascript:void(0);" class="icon" onclick="headerMenu()" role="navigation" aria-label="Menu toggle will show and hide a navigational link list">
+                <i class="fa fa-bars"></i>
+        </a>
+    </header>
+    <nav role="navigation" id="menu">
+        <div aria-label="Main navigational link list" id="headerMenuLinks">
+            <a href="index.html">Home</a>
+            <p>Term Pages</p>
+            <ul>
+                <li><a href="accessibility.html">Accessibility: Introduction</a></li>
+                <li><a href="accessibility-sectionOne.html">Accessibility: Physical Impairments</a></li>
+                <li><a href="accessibility-sectionTwo.html">Accessibility: Visual Impairments</a></li>
+                <li><a href="accessibility-conclusion.html">Accessibility: Conclusions and Resources</a></li>
+                <li><a href="index.html">Term</a></li>
+                <li><a href="index.html">Term</a></li>
+            </ul>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <section>
+
+        <h1>Accessibility Section 1: Physical Impairments</h1>
+
+            <p>Not all users have the same physical capabilities. Some users cannot use a mouse and must use modified keyboard arrangements to utilize a computer system.</p>
+
+            <p>When using or designing a system, it is interesting and important to test it with keyboard navigation in mind. Without any additional changes to settings, most webpages can be operated with just a keyboard using the Tab key to navigate between interactable elements and Space or Enter to select the object.</p>
+
+            <section role="complementary" aria-label="Section for interactive examples related to the content" id="keyboard-example">
+
+                <p>Let's experiment with the following elements. Select the first text box, enter data if you would like, and try tabbing through the objects and using the form without your mouse.</p>
+                
+                <blockquote id="keyboard-taborder-bad" aria-label="Example of bad tab order on elements">
+
+                    <form name="contact_form-bad">
+                        <p style="padding: 24px 0 0 0; font-weight: 700;">What's your email?</p>
+                        <input type="text" tabindex="1" id="email_address" placeholder="email@designbyte.org"/>
+                        <p style="padding: 8px 0 0 0; font-weight: 700;">What is the message you would like to send me?</p>
+                        <textarea placeholder="Hello, designbyte team!" tabindex="-1" ></textarea>
+                        <input name="Send" type="submit" value="Send" tabindex="2">
+                    </form>
+                
+                </blockquote>
+
+                <p>Note that the tab order does not allow the user to navigate to the second element in the form and skips straight to the Send button. While this may only be a mild irritant to a user who uses mouse and keyboard for navigation, consider a user with one functional hand who is only able to use a keyboard for navigation — they are unable to access this element.</p>
+
+                <p>It is vital that proper tab orders are set for elements on a page, or else a user who is limited to keyboard navigation cannot navigate the page appropriately — a violation of accessibility.</p>
+
+
+    </section>
+
+    <footer>
+        <a id="previous" href="accessibility.html" aria-label="Previous section navigation"><i class="fas fa-arrow-left"></i></a>
+        <p aria-label="Current page indicator">Accessibility: Introduction</p>
+        <a id="next" href="accessibility-sectionTwo.html" aria-label="Next section navigation"><i class="fas fa-arrow-right"></i></a>
+    </footer>
+
+    <!-- Script calls -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>

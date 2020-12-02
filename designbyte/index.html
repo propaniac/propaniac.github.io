@@ -14,14 +14,14 @@
 
 <body>
 
-    <header>
+    <header role="banner">
         <a href="index.html" id="logo"><img src="images/designbyte_retina.png" alt="Design Byte logo, with design in a dark blue regular font and byte in a dark gray and bold font"></a>
-        <a href="javascript:void(0);" class="icon" onclick="headerMenu()">
+        <a href="javascript:void(0);" class="icon" onclick="headerMenu()" role="navigation" aria-label="Menu toggle will show and hide a navigational link list">
                 <i class="fa fa-bars"></i>
         </a>
     </header>
-    <div id="menu">
-            <div id="headerMenuLinks">
+    <nav role="navigation" id="menu">
+            <div aria-label="Main navigational link list" id="headerMenuLinks">
                 <a href="index.html">Home</a>
                 <p>Term Pages</p>
                 <ul>
@@ -32,9 +32,9 @@
                 <a href="contact.html">Contact</a>
                 <a href="about.html">About</a>
             </div>
-    </div>
+        </nav>
 
-    <section id="landing">
+    <section role="main" aria-label="Main page contents" id="landing">
         <h1>Welcome to designbyte!</h1>
         <p>This site is intended to work as a clear, concise design guide for anyone to read over and be able to make design decisions. Whether you are a developer or a just looking to learn a bit more about design, <strong>designbyte</strong> is happy to help!</p>
 
@@ -42,13 +42,13 @@
         <p>After much consideration, a few number of terms were selected for this site. While there are only a few, the ideas are all important factors in making design choices.</p>
         <p>Each page is designed with the content in mind, and features examples and some interactive elements to demonstrate the concepts.</p>
 
-        <div class=termsHeading>
+        <div role="content and navigation" class=termsHeading>
             <h2>Terms</h2>
-            <button type="button" id="listButton" style="display: none;"><i class="fas fa-list"></i>List View</button>
-            <button type="button" id="cardButton"><i class="fas fa-grip-horizontal"></i>Card View</button>
+            <button type="button" id="listButton" role="navigation" aria-label="List View button — View terms in a list style format" style="display: none;"><i class="fas fa-list"></i>List View</button>
+            <button type="button" id="cardButton" role="navigation" aria-label="Card View button — View terms in a card style format"><i class="fas fa-grip-horizontal"></i>Card View</button>
         </div>
 
-        <div class="flexList" id="termList">
+        <div role="main" aria-label="List of links to each term's page and a brief description" class="flexList" id="termList">
             <a class="list" id="1" href="term.html">
                 <h3>Term 1</h3>
                 <p>Description</p>

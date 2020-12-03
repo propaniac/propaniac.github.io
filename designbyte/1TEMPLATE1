@@ -23,7 +23,7 @@
     <nav role="navigation" id="menu">
         <div aria-label="Main navigational link list" id="headerMenuLinks">
             <a href="index.html">Home</a>
-            <p>Term Pages</p>
+            <a href="index.html#terms">Term Pages</a>
             <ul>
                 <li><a href="accessibility.html">Accessibility: Introduction</a></li>
                 <li><a href="accessibility-sectionOne.html">Accessibility: Physical Impairments</a></li>
@@ -45,5 +45,5 @@
 
     <!-- Script calls -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>

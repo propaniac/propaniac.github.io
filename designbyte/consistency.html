@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>designbyte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="global.css">
+    <script src="https://kit.fontawesome.com/d0b8b62b75.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" id="logo"><img src="images/designbyte_retina.png" alt="Design Byte logo, with design in a dark blue regular font and byte in a dark gray and bold font"></a>
+        <a href="javascript:void(0);" class="icon" onclick="headerMenu()">
+                <i class="fa fa-bars"></i>
+        </a>
+    </header>
+    <nav role="navigation" id="menu">
+        <div aria-label="Main navigational link list" id="headerMenuLinks">
+            <a href="index.html">Home</a>
+            <a href="index.html#terms">Term Pages</a>
+            <ul>
+                <li><a href="accessibility.html">Accessibility: Introduction</a></li>
+                <li><a href="accessibility-sectionOne.html">Accessibility: Physical Impairments</a></li>
+                <li><a href="accessibility-sectionTwo.html">Accessibility: Visual Impairments</a></li>
+                <li><a href="accessibility-conclusion.html">Accessibility: Conclusions and Resources</a></li>
+                <li><a href="consistency.html">Consistency</a></li>
+                <li><a href="hierarchy.html">Hierarchy</a></li>
+                <li><a href="legibility.html">Legibility</a></li>
+                <li><a href="personas.html">Personas</a></li>
+            </ul>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <section role="main" aria-label="Main page contents" id="cosnistency">
+        <h1>Consistency</h1>
+        <p>Consistency, in a basic sense, refers to the following of established rules. In design, it is believed that a consistent system is more usable and easy to learn if it maintains consistency across similar elements. We can break consistency into 4 different types: <strong>Aesthetic</strong>, <strong>Functional</strong>, <strong>Internal</strong>, and <strong>External</strong>.</p>
+
+        <h2>Aesthetic Consistency</h2>
+            <p>Aesthetic consistency covers elements which have a similar look, with color, font, and the like. Using similar looks for elements can assist with building recognition in a system.</p>
+
+            <p>As a user becomes more acquainted with a product, they will become accustomed to aesthetic similarities and their associations.</p>
+
+            <blockquote>
+                <p>Imagine you are making a purchase on a shopping website. You go through steps 1 and 2 and note that the confirm button is a nice green color while the back or cancel button is a dark gray. As you finish up with step 3 you notice that the bottom that the color of the <em>Proceed</em> button is gray while the cancel button is green. This confuses you, but you are able to recover eventually and buy yourself that pair of shoes you've had on your wishlist for months.</p>
+            </blockquote>
+
+            <p>If we deviate from aesthetic consistency, the usability of a system is decreased, causing potential confusion or room for error in the user base.</p>
+
+            <blockquote>
+                <p>Wouldn't it be weird if we changed the style of a paragraph mid-<span id="weird-para">sentence and just kind of ignored that it happened? Or if we used a</span> <span id="weirder-para">bunch of different typefaces all on the same site?</span></p>
+
+                <p>Let's ignore that this happened and call it a day.</p>
+            </blockquote>
+
+            <p>If we set an aesthetic standard, it only improves the system to follow it. Unless there is a good reason to deviate, implementing inconsistent aesthetics in a system can only cause issues with usability of a system.</p>
+
+        <h2>Functional Consistency</h2>
+            <p>Similar functions should execute in similar manner. By pairing the meaning of a function with an action, the learnability of a system is greatly improved.</p>
+
+            <p>If a similar function behaves similarly in multiple areas of a system, this results in the knowledge of the function being applicable across the system. Mandating multiple manners of executing the same function or changing the behavior of a function can result in problems with usability.</p>
+            
+            <p>Try out the buttons in the following blocks and follow the commands.</p>
+
+            <blockquote>
+                <h4 class="center">Click the <em>apply</em> button. <span id="good1" class="good" style="display: none"><i class="fas fa-smile"></i></span><span id="bad1" class="bad" style="display: none"><i class="fas fa-frown"></i></span></h4>
+                <div class="button-group" aria-label="A group of buttons, for confirming or cancelling a process">
+                    <button type="button" class="cancel" id="deny1">Deny</button>
+                    <button type="button" id="apply1">Apply</button>
+                </div>
+            </blockquote>
+
+            <p>Clicking the apply button added a happy face icon to the block, but clicking the deny button made it sad.</p>
+
+            <blockquote>
+                <h4 class="center">Click the <em>apply</em> button. <span id="good2" class="good" style="display: none"><i class="fas fa-smile"></i></span><span id="bad2" class="bad" style="display: none"><i class="fas fa-frown"></i></span></h4>
+                <div class="button-group" aria-label="A group of buttons, for confirming or cancelling a process">
+                    <button type="button" class="cancel" id="deny2">Deny</button>
+                    <button type="button" id="apply2">Apply</button>
+                </div>
+            </blockquote>
+
+            <p>Clicking apply makes the block happy again but clicking deny makes it sad. We're starting to understand this.</p>
+
+            <blockquote>
+                <h4 class="center">Click the <em>apply</em> button. <span id="good3" class="good" style="display: none"><i class="fas fa-smile"></i></span><span id="bad3" class="bad" style="display: none"><i class="fas fa-frown"></i></span></h4>
+                <div class="button-group" aria-label="A group of buttons, for confirming or cancelling a process">
+                    <button type="button" id="deny3" class="cancel">Deny</button>
+                    <button type="button" id="apply3">Apply</button>
+                </div>
+            </blockquote>
+
+            <p>Again. Apply made the block happy. This makes sense.</p>
+
+            <blockquote>
+                <h4 class="center">Click the <em>apply</em> button. <span id="good4" class="good" style="display: none"><i class="fas fa-smile"></i></span><span id="bad4" class="bad" style="display: none"><i class="fas fa-frown"></i></span></h4>
+                <div class="button-group" aria-label="A group of buttons, for confirming or cancelling a process">
+                    <button type="button" class="cancel" id="deny4">Deny</button>
+                    <button type="button" id="apply4">Apply</button>
+                </div>
+            </blockquote>
+
+            <p>Clicking apply made it a sad face. This isn't what we expected. Why is that? Did we do something wrong?</p>
+
+            <p>If we alter the behavior of a function expected to behave the same as another, a user could be confused and feel there is an error with the system. If a function isn't intended to behave the same as another similar function in the system, consider using different verbiage or manner of execution to avoid potential errors or usability issues.</p>
+
+        <h2>Internal Consistency</h2>
+            <p>Internal consistency applies to functional and aesthetic consistency within a system or family of systems as a whole.</p>
+
+            <p>Some examples can be seen when looking at the the Adobe Creative Cloud family of applications.</p>
+
+            <img src="images/consistency/adobe_photoshop.png" alt="A screenshot of the Adobe Photoshop user interface with a blank document open. The toolbar is shown along the left while element properties are shown on the top. Other tools like color pickers, layers, and other panels are shown on the right.">
+            <img src="images/consistency/adobe_illustrator.png" alt="A screenshot of the Adobe Illustrator user interface while the file for the Design Byte logo is opened. The toolbar is shown along the left while element properties are shown on the top. Other tools like color pickers, layers, and other panels are shown on the right.">
+
+            <blockquote>
+
+                <p>Looking at these two applications, there many similarities. From colors and layout to functionality, it is abundantly apparent that these applications are designed by the same company.</p>
+
+                <p>Pay special attention to the aesthetics and functions within both applications. While the two offer different use cases, they not only share a similar look and feel but they share many similar functions.</p>
+
+                <p>This demonstrates <strong>internal consistency</strong> given that the applications are (a.) consistent with themselves and (b.) consist within the family of Adobe Applications.</p>
+
+            </blockquote>
+
+            <p>In short, internal consistency covers both the <strong>aesthetic</strong> and <strong>functional</strong> consistencies within a system or across a family of systems, so it is important to plan and leverage this accordingly. Utilizing similar aesthetics across a system or family can create a more inviting experience for a user overall. Applying functional consistency across applications can aid tremendously with usability, as a user of one system could easily transition to another if it offers similar functions.</p>
+
+        <h2>External Consistency</h2>
+            <p>Given the nature of internal consistency, it is easy to assume what external consistency applies to — external consistency affects the similarity of two separate systems' aesthetics and functions.</p>
+
+            <p>Of course, it is not legal to completely use the same aesthetic and functions as another company's system, but there are many common standards this can apply to.</p>
+
+            <p>For instance, an <strong>external, aesthetic consistency</strong> seen across many systems is the use of blue text to indicate a link to another webpage. This is a standard that is quite possibly universally known. That's not to say all hyperlinks must be blue, however, but it is a common practice that is known by many users and used in many systems.</p>
+
+            <p>At a functional level, many systems consistently utilize the brand logo or site name in the header as a "home" button.</p>
+
+            <img src="images/consistency/amazon_logo-nav.png" alt="A screenshot of a page on Amazon. The cursor is hovering over the Amazon logo in the upper left of the screen, and a banner on the lower left from the browser indicates that the logo links to the Amazon home page.">
+
+            <img src="images/consistency/twitter_logo-nav.png" alt="A screenshot of a page on Twitter. The cursor is hovering over the Twitter logo in the upper left of the screen, and a banner on the lower left from the browser indicates that the logo links to the Twitter home page.">
+
+            <blockquote>
+                <p>On both Amazon and Twitter, clicking the brand logo in the upper left of the screen results in the home page of the site being opened. This is an <strong>external, functional consistency.</strong></p>
+            </blockquote>
+
+            <p>So, while following the exact same aesthetic or functional standards as another brand is not ideal nor advisable, following similar, universal standards is always a positive and can increase the usability of a system. Unless using a licensed or open source framework, mirroring another brand's aesthetics or functions is not a wise decision and could be considered illegal.</p>
+    </section>
+
+
+    <!-- Script calls -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/consistency.js"></script>
+
+</body>

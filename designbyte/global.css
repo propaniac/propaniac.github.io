@@ -66,6 +66,7 @@ body {
 	height: 100%;
 	width: 100%;
 	max-width: 720px;
+	color: #262626;
 	background-color: #f5f5f5;
 	margin: 1em auto;
 	margin-top: 140px;
@@ -145,7 +146,7 @@ header {
 	background-color: #d9d9d9;
 	width: 100%;
 	height: auto;
-	min-height: 2em;
+	min-height: 1.9em;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
@@ -168,15 +169,22 @@ header a:hover, #menu a:hover {
 header img {
 	width: 240px;
 	transition: 0.25s;
+	/* Get rid of the margins added for body images. Makes the header too big, otherwise. */
+	margin: 0;
+	/* Add a transparent border to the element in its normal state so that the size of the header is not altered on hover */
+	border-bottom: 0.2em solid transparent;
 }
 
-header img:hover {
-	filter: brightness(2);
+header img:hover, header img:focus {
+	border-bottom: 0.2em solid #262626;
 }
 
 #logo {
-	width: 240px;
+	min-width: 240px;
 	justify-content: flex-start;
+	margin: 0;
+	/* Remove some default padding on bottom to compensate for the border element */
+	padding-bottom: 0.8em;
 }
 
 header a.icon {
@@ -184,12 +192,13 @@ header a.icon {
 	margin-left: auto;
 	font-size: 1.9em;
 	height: 100%;
-	border: 0.1em solid transparent
+	/* Add a transparent border to the element in its normal state so that the size of the header is not altered on hover */
+	border: 0.1em solid transparent;
 }
 
 header a.icon:hover, header a.icon:focus {
 	color: #262626 !important;
-	border: 0.1em solid #bfbfbf
+	border: 0.1em solid #262626;
 }
 
 #menu {
@@ -376,6 +385,14 @@ button:hover {
 	display: flex;
 }
 
+#termList p {
+	color: #262626
+}
+
+#termList p:hover {
+	color: #061178;
+}
+
 .flexList {
 	flex-direction: column;
 }
@@ -477,6 +494,10 @@ input[type=submit] {
 	body {
 		padding: 1em;
 		font-size: 12pt;
+	}
+
+	header a.icon {
+		font-size: 2.1em;
 	}
 
 }

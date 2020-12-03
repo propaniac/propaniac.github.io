@@ -29,8 +29,10 @@
                 <li><a href="accessibility-sectionOne.html">Accessibility: Physical Impairments</a></li>
                 <li><a href="accessibility-sectionTwo.html">Accessibility: Visual Impairments</a></li>
                 <li><a href="accessibility-conclusion.html">Accessibility: Conclusions and Resources</a></li>
-                <li><a href="index.html">Term</a></li>
-                <li><a href="index.html">Term</a></li>
+                <li><a href="consistency.html">Consistency</a></li>
+                <li><a href="hierarchy.html">Hierarchy</a></li>
+                <li><a href="legibility.html">Legibility</a></li>
+                <li><a href="personas.html">Personas</a></li>
             </ul>
             <a href="contact.html">Contact</a>
             <a href="about.html">About</a>
@@ -47,34 +49,42 @@
 
         <div role="content and navigation" class=termsHeading>
             <h2>Terms</h2>
-            <button type="button" id="listButton" role="navigation" aria-label="List View button — View terms in a list style format" style="display: none;"><i class="fas fa-list"></i>List View</button>
-            <button type="button" id="cardButton" role="navigation" aria-label="Card View button — View terms in a card style format"><i class="fas fa-grip-horizontal"></i>Card View</button>
+            <button type="button" id="listButton" role="navigation" aria-label="List View button — View terms in a list style format"><i class="fas fa-list"></i> Toggle List View</button>
+            <button type="button" id="cardButton" role="navigation" aria-label="Card View button — View terms in a card style format" style="display: none"><i class="fas fa-grip-horizontal"></i>Toggle Card View</button>
         </div>
+        <p class="indicator" id="list-indicator" role="alert" aria-label="An indicator which conveys that the current state is list mode" style="display: none">Currently displaying in <strong>list mode</strong></p>
+        <p class="indicator" id="card-indicator" role="alert" aria-label="An indicator which conveys that the current state is card mode">Currently displaying in <strong>card mode</strong></p>
 
-        <div role="main" aria-label="List of links to each term's page and a brief description" class="flexList" id="termList">
-            <a class="list" id="1" href="accessibility.html">
+        <div role="main" aria-label="List of links to each term's page and a brief description" class="flexCard" id="termList">
+            
+            <a class="card" id="1" href="accessibility.html">
                 <h3>Accessibility</h3>
-                <p>Accessibility is a principle which relates to the usability of a system for any and all users. Here, we discuss the topics of physical and visual impairments and their relationship with designing systems.</p>
+                <p id="1p" style="display: none">Accessibility is a principle which relates to the usability of a system for any and all users. Here, we discuss the topics of physical and visual impairments and their relationship with designing systems.</p>
+                <i id="1i" class="fas fa-universal-access"></i>
             </a>
 
-            <a class="list" id="2" href="term.html">
-                <h3>Term 2</h3>
-                <p>Description</p>
+            <a class="card" id="2" href="term.html">
+                <h3>Consistency</h3>
+                <p id="2p" style="display: none">Description</p>
+                <i id="2i" class="fas fa-clone"></i>
             </a>
 
-            <a class="list" id="3" href="term.html">
-                <h3>Term 3</h3>
-                <p>Description</p>
+            <a class="card" id="3" href="term.html">
+                <h3>Hierarchy</h3>
+                <p id="3p" style="display: none">Description</p>
+                <i id="3i" class="fas fa-sitemap"></i>
             </a>
 
-            <a class="list" id="4" href="term.html">
-                <h3>Term 4</h3>
-                <p>Description</p>
+            <a class="card" id="4" href="term.html">
+                <h3>Legibility</h3>
+                <p id="4p" style="display: none">Description</p>
+                <i id="4i" class="fas fa-font"></i>
             </a>
 
-            <a class="list" id="5" href="/term.html">
-                <h3>Term 5</h3>
-                <p>Description</p>
+            <a class="card" id="5" href="/term.html">
+                <h3>Personas</h3>
+                <p id="5p" style="display: none">Description</p>
+                <i id="5i" class="fas fa-user-friends"></i>
             </a>
         </div>
     </section>

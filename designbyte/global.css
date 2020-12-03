@@ -247,21 +247,14 @@ footer {
 }
 
 footer p {
+	display: block;
 	font-weight: 700;
 	font-size: 1.2em;
 	margin: 0;
 	max-width: 60%;
-	height: 3em;
+	height: auto;
 	padding: 0 0.5em;
 	text-align: center;
-
-	/* Truncating text which exceeds two lines with ellipses */
-	/* Resource on this: https://medium.com/@elad/trimming-multi-lines-in-css-5ae59d5e6d84 */
-	display: -webkit-box;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-	text-overflow: ellipsis;
 }
 
 footer a {
@@ -395,6 +388,13 @@ button:hover, button:focus, input[type=submit]:hover, input[type=submit]:focus {
 	color: #061178;
 }
 
+#termList i {
+	font-size: 6em;
+	padding: 0.25em 0;
+	width: 100%;
+	text-align: center;
+}
+
 .flexList {
 	flex-direction: column;
 }
@@ -417,7 +417,21 @@ button:hover, button:focus, input[type=submit]:hover, input[type=submit]:focus {
 	border-radius: 1em;
 	padding: 1em;
 	margin: 1em;
-	max-width: 50%;
+	width: 10em;
+	max-width: 45%;
+	border: 0.25em solid transparent;
+	text-align: center;
+}
+
+.card:hover, .card:focus {
+	text-decoration: none !important;
+	border: 0.25em solid #061178;
+}
+
+.indicator {
+	text-align: center;
+	margin: 0.5em 0;
+	font-style: italic;
 }
 
 /* Content-related elements */
@@ -439,13 +453,13 @@ input[type=text] {
 	min-width: 50%;
     max-width: 75%;
     box-sizing: border-box;
-    border: none;
+    border: 2px solid transparent;
     border-bottom: 8px solid #061178;
     font-size: 2em;
     color: #8c8c8c;
     outline: none;
     padding: 4px 0px 4px 0;
-    margin-bottom: 24px;
+    margin-bottom: 0.5em;
     transition: 0.5s;
     -webkit-appearance: none;
     border-radius: 0;
@@ -455,14 +469,14 @@ textarea {
     width: 100%;
     height: 4em;
     box-sizing: border-box;
-    border: none;
+    border: 2px solid transparent;
     border-bottom: 8px solid #061178;
     font-size: 2em;
     font-family: 'Work Sans', sans-serif;
     color: #8c8c8c;
     outline: none;
     padding: 4px 0px 4px 0;
-    margin-bottom: 24px;
+    margin-bottom: 0.5em;
     transition: 0.5s;
     overflow: auto; 
     overflow-x: hidden;
@@ -518,4 +532,24 @@ input[type=submit] {
 		top: 6em; 
 	}
 
+	footer p {
+		/* Have to set a fixed height so that the element does not change in size due to the viewport width to avoid overflow */
+		height: 3em;
+		/* Truncating text which exceeds two lines with ellipses */
+		/* Resource on this: https://medium.com/@elad/trimming-multi-lines-in-css-5ae59d5e6d84 */
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.card {
+		padding: 0.5em;
+		margin: 0.5em;
+	}
+
+	.termsHeading button {
+		margin-right: 0;
+	}
 }

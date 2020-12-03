@@ -20,24 +20,30 @@
                 <i class="fa fa-bars"></i>
         </a>
     </header>
-    <div id="menu">
-            <div id="headerMenuLinks">
-                <a href="/index.html">Home</a>
-                <p>Term Pages</p>
-                <ul>
-                    <li><a href="/index.html">Term</a></li>
-                    <li><a href="/index.html">Term</a></li>
-                    <li><a href="/index.html">Term</a></li>
-                </ul>
-                <a href="/contact.html">Contact</a>
-                <a href="/about.html">About</a>
-            </div>
-    </div>
+    <nav role="navigation" id="menu">
+        <div aria-label="Main navigational link list" id="headerMenuLinks">
+            <a href="index.html">Home</a>
+            <p>Term Pages</p>
+            <ul>
+                <li><a href="accessibility.html">Accessibility: Introduction</a></li>
+                <li><a href="accessibility-sectionOne.html">Accessibility: Physical Impairments</a></li>
+                <li><a href="accessibility-sectionTwo.html">Accessibility: Visual Impairments</a></li>
+                <li><a href="accessibility-conclusion.html">Accessibility: Conclusions and Resources</a></li>
+                <li><a href="consistency.html">Consistency</a></li>
+                <li><a href="hierarchy.html">Hierarchy</a></li>
+                <li><a href="legibility.html">Legibility</a></li>
+                <li><a href="personas.html">Personas</a></li>
+            </ul>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
 
-    <section id="">
+    <section role="main" aria-label="Main page contents" id="">
     </section>
 
 
     <!-- Script calls -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/js/main.js"></script>
 </body>

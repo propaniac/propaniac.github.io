@@ -251,10 +251,16 @@ footer p {
 	font-size: 1.2em;
 	margin: 0;
 	max-width: 60%;
-	max-height: 3em;
+	height: 3em;
 	padding: 0 0.5em;
 	text-align: center;
-	overflow: auto;
+
+	/* Truncating text which exceeds two lines with ellipses */
+	/* Resource on this: https://medium.com/@elad/trimming-multi-lines-in-css-5ae59d5e6d84 */
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 	text-overflow: ellipsis;
 }
 

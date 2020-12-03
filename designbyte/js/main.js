@@ -3,8 +3,17 @@ function headerMenu() {
     var x = document.getElementById("headerMenuLinks");
     if (x.style.display === "block") {
       x.style.display = "none";
+
+      // Remove any styling for the menu's border.
+      // While the styling isn't adjusted on load, this is acceptable given that the border styling is added on open.
+      // If the style doesn't get reverted, the little circle will be visible after closing the menu; this is just a precaution.
+      $("#menu").css("border","none")
     } else {
       x.style.display = "block";
+
+      // Add border to the menu element while it's open.
+      // The border is visible if the menu is closed as just a little circle, so adding it only while it's open doesn't make the element visible if it's closed.
+      $("#menu").css("border","0.25em solid #bfbfbf")
     }
   }
 

@@ -15,7 +15,7 @@
 <body>
     <header role="banner">
         <a href="index.html" id="logo"><img src="images/designbyte_retina.png" alt="Design Byte logo, with design in a dark blue regular font and byte in a dark gray and bold font"></a>
-        <a href="javascript:void(0);" class="icon" onclick="headerMenu()" role="navigation" aria-label="Menu toggle will show and hide a navigational link list">
+        <a href="javascript:void(0);" class="icon" onclick="headerMenu()" onkeydown="headerMenu()" role="navigation" aria-label="Menu toggle will show and hide a navigational link list">
                 <i class="fa fa-bars"></i>
         </a>
     </header>
@@ -46,34 +46,113 @@
 
         <p>Whether it be testing tools or design tools, there are many systems out there which can assist with making sure a system is accessible from the start.</p>
 
-        <h3>Mozilla Firefox Accessibility Inspector</h3>
-        <p>Mozilla Firefox has recently pushed a suite of tools for accessibility testing into the browser. After Firefox version 79, an Accessibility Inspector functionality was enabled by default in web developer tools (i.e. Inspect Element). This functionality is useful in many cases, and being that it is native functionality there is no reason not to use it.</p>
+        <section class="resource" id="antDesignColor" role="article">
+            <h3>Ant Design Colors</h3>
+            <p>Ant Design is a framework for React, but their design guidelines have many useful tools and concepts to consider. With regard to accessibility, the <a href="https://ant.design/docs/spec/colors">Ant Design Colors</a> section within the design guidelines has a wonderful color picker tool.</p>
 
-        <img src="https://media.prod.mdn.mozit.cloud/attachments/2018/06/06/16028/5c6862a4cc2a604edad8f0fcdc35a7c1/web-page-context-menu.png" alt="An image showing the Inspect Accessibility Properties button as displayed in the right-click context menu on a webpage in the Firefox browser.">
+            <img src="images/accessibility/ant-design_color_picker.png" alt="A screenshot showing a small section of the Ant Design color picker. Showing the Dust Red, Volcano, and Sunset Orange base colors, the screenshot shows a the color ranges and the capability of copying color data of a desired color on click and shows the hexidecimal color values being displayed while hovering over a specific color.">
 
-        <blockquote><p>After version 79 of Firefox, the <em>Inspect Accessibility Properties</em> is available within the right-click context menu for any webpage on the Mozilla Firefox browser. This will open the standard developer tools panel for the browser, focussed on the Accessibility pane.</p>
-        <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector">Mozilla MDN web docs: Accessibility Inspector Tools</a></p></blockquote>
+            <blockquote>
 
-        <p>The functionality offers automated and manual checks for various types of issues. The issue types cover <strong>Contrast</strong> for visual impairments and general visual issues, <strong>Keyboard</strong> for navigating a page with keyboard controls, and <strong>Labels</strong> for visual impairments requiring screenreaders</p>
+                <p>Ant Design's Colors page offers a selection of base color pallettes to select from. There is a wide range of base colors to choose from, each with a range of 10 luminances.</p>
 
-        <img src="images/accessibility/firefox_all_accessibility_issues_automated.png" alt="A screenshot showing the open Check For Issues menu of the Accessibility tab in the developer tools pane. Options include filters for None, All, Contrast, Keyboard, and Label issues types, flagged automatically by the browser.">
+                <p>The color selection is quite good, with warm and inviting colors to choose from. The hex values for a color can be copied to the clipboard by simply clicking the desired color.</p>
 
-        <blockquote><p>The automated accessibility checks are able to be filtered by the various types of issues that the browser flags.</p></blockquote>
+            </blockquote>
 
-        <p>On top of offering the ability to assess a system’s colors and contrast for visual design, it offers tools to evaluate the tab order for objects, as is important for using keyboard controls with some impairments.</p>
+            <p>With many potential combinations from this color picker, alone, there are many possibilities. However, the possibilities should be limited based upon whether or not the contrast between selected colors is in an acceptable range. See the following section on contrast ratio checkers for further resources that, when paired with the Ant Design Colors page, can offer great assistance with defining a color pallette.</p>
 
-        <img src="https://media.prod.mdn.mozit.cloud/attachments/2020/11/19/17440/52a744b03e4b8401b322aaee55bdeee4/Accessibility-Inspector-show_tab_order.png" alt="A screenshot of a webpage being accessed using the Show Tabbing Order function in Firefox’s Accessibility Inspector. The page shows the order with which the objects will be navigated to when using the Tab key, with the currently selected element being highlighted.">
+        </section>
 
-        <blockquote><p>The Accessibility Inspector also offers a toggle to display the tab order for the current page. This is especially helpful for testing with keyboard navigation in mind.</p>
-        <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector">Mozilla MDN web docs: Accessibility Inspector Tools</a></p></blockquote>
+        <section class="resource" id="contrastRatio" role="article">
+            <h3>Contrast ratio checkers</h3>
+            <p>There are many websites and tools that can aid with ensuring that colors have proper contrast for not only issues related to color deficiencies but also aid with making sure visibility is high enough for any users.</p>
 
-        <p>Additional information on the functionality can be found on the <a href="https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector">Mozilla MDN web docs: Accessibility Inspector Tools</a> page.</p>
+            <p><a href="https://contrast-ratio.com/">contrast-ratio.com</a> is a simple to use website which can help with defining the color pallettes of any sort of system. It accepts a variety of color code formats, from RGB and RGBA to hex and HSLA.</p>
+
+            <img src="images/accessibility/contrast-ratio.png" alt="A screenshot showing the contrast-ratio website with the designbyte brand colors plugged in for a contrast check. The colors have a contrast ratio of 10.94, which the site notes is a high enough contrast for any text sizes to be passing standards.">
+
+            <blockquote>
+
+                <p>The interface for the site is quite to the point, simply plug in the "Background" color on the left text area and the foreground or "Text color" in the right text area, and the contrast ratio is evaluated.</p>
+
+                <p>Hovering over the contrast ratio value between the two text fields will display some more information about the current inputs.</p>
+
+                <p>The site follows WCAG 2.0 rules on contrast, and the information displayed about the current ratio conveys whether or not it passes these standards.</p>
+
+                <p>Our brand colors for designbyte show a contrast of 10.94, which passes the WCAG standards at a AAA level, meaning the dark blue is an appropriate use for text of any size on the light gray background color.</p>
+
+            </blockquote>
+
+            <p>This is a useful site to consider when designing with tools outside the realm of web interfaces, whether it be with applications like Adobe InDesign or while creating a desktop application. This tool will assist with making sure colors are up to WCAG specifications, albeit in a semi-manual manner. For web-related projects, see the Mozilla Firefox Accessibility Inspector section for more of an automated approach and a more full suite of tools.</p>
+
+        </section>
+
+        <section class="resource" id="firefoxAccessibilityInspector" role="article">
+            <h3>Mozilla Firefox Accessibility Inspector</h3>
+            <p>Mozilla Firefox has recently pushed a suite of tools for accessibility testing into the browser. After Firefox version 79, an Accessibility Inspector functionality was enabled by default in web developer tools (i.e. Inspect Element). This functionality is useful in many cases, and being that it is native functionality there is no reason not to use it.</p>
+
+            <img src="https://media.prod.mdn.mozit.cloud/attachments/2018/06/06/16028/5c6862a4cc2a604edad8f0fcdc35a7c1/web-page-context-menu.png" alt="An image showing the Inspect Accessibility Properties button as displayed in the right-click context menu on a webpage in the Firefox browser.">
+
+            <blockquote><p>After version 79 of Firefox, the <em>Inspect Accessibility Properties</em> is available within the right-click context menu for any webpage on the Mozilla Firefox browser. This will open the standard developer tools panel for the browser, focussed on the Accessibility pane.</p>
+            <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector">Mozilla MDN web docs: Accessibility Inspector Tools</a></p></blockquote>
+
+            <p>The functionality offers automated and manual checks for various types of issues. The issue types cover <strong>Contrast</strong> for visual impairments and general visual issues, <strong>Keyboard</strong> for navigating a page with keyboard controls, and <strong>Labels</strong> for visual impairments requiring screenreaders</p>
+
+            <img src="images/accessibility/firefox_constrast_check_manual.png" alt="A screenshot showing a contrast warning for an HTML element in the Firefox browser using the Accessibilty Inspector. The element is indicated as a warning for the contrast check as it has a contrast ratio of 3.86 for the text color versus the background color, which is not considered to be a high enough contrast.">
+            
+            <blockquote>The Accessibility Inspector allows for semi-manual checks for contrast issues while hovering over an element in the "pick object" mode, shown in the upper left of the Developer Tools pane.</blockquote>
+
+            <img src="images/accessibility/firefox_all_accessibility_issues_automated.png" alt="A screenshot showing the open Check For Issues menu of the Accessibility tab in the developer tools pane. Options include filters for None, All, Contrast, Keyboard, and Label issues types, flagged automatically by the browser.">
+
+            <blockquote><p>The automated accessibility checks are able to be filtered by the various types of issues that the browser flags.</p></blockquote>
+
+            <p>On top of offering the ability to assess a system’s colors and contrast for visual design, it offers tools to evaluate the tab order for objects, as is important for using keyboard controls with some impairments.</p>
+
+            <img src="https://media.prod.mdn.mozit.cloud/attachments/2020/11/19/17440/52a744b03e4b8401b322aaee55bdeee4/Accessibility-Inspector-show_tab_order.png" alt="A screenshot of a webpage being accessed using the Show Tabbing Order function in Firefox’s Accessibility Inspector. The page shows the order with which the objects will be navigated to when using the Tab key, with the currently selected element being highlighted.">
+
+            <blockquote><p>The Accessibility Inspector also offers a toggle to display the tab order for the current page. This is especially helpful for testing with keyboard navigation in mind.</p>
+            <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector">Mozilla MDN web docs: Accessibility Inspector Tools</a></p></blockquote>
+
+            <p>Additional information on the functionality can be found on the <a href="https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector">Mozilla MDN web docs: Accessibility Inspector Tools</a> page.</p>
+        </section>
+        
+        <section class="resource" id="usabilityGov" role="article">
+            <h3>U.S. Department of Health and Human Services: Web Design & Usability Guidelines</h3>
+            <img src="images/accessibility/usabilityGov.png" alt="A screenshot of the usability dot gov website which shows the How To and Tools page. Some page contents shown include links and icons for Project Management Methods, User Research Methods, User Interface Design Methods, and Visual Design Methods.">
+
+            <p>The <a href="https://www.usability.gov/">usability.gov</a> website offers a lot of documentation related to things such as accessibility and basic quidelines for designing an accessible system.</p>
+
+            <p>On top of covering accessibility, it offers a good number of guides on user experience and design basics, so it is a useful site to browse, overall.</p>
+
+        </section>
+
+        <section>
+            <h3>Web Content Accessibility Guidelines (WCAG)</h3>
+
+            <p>WCAG is an accessibility guideline and initiative which aims to ensure that webpages are accessible to all. The <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG webpage</a> supplies various tools and tips, and thorough requirements on many topics related to the web.</p>
+
+            <p>From hosting video content and subtitles to accommodating all device sizes, the WCAG has guidelines and requirements for it all.</p>
+
+            <img src="images/accessibility/wcag_colorElements.png" alt="A screenshot of the WCAG website's section on designing for web accessibility, demonstrating principles for identifying elements by color. The example shows a sort of quiz interface, where the bad example has 4 colored triangles that are not numbered, asking the user to identify the right-triangle by the color only.  The good example shows the triangles being identified by both color and numbers, so that any user can identify the right-triangle even if they suffer a color-deficiency.">
+
+            <blockquote>
+
+                <p>The <a href="https://www.w3.org/WAI/tips/designing/">Designing for Web Accessibility</a> page offers a variety of examples of requirements which should be followed while designing an accessible system.</p>
+
+                <p>The above example shows things to avoid when designing a system and a suggested fix. It is not acceptable to identify objects based upon color alone, in this example of a sort of quiz, and instead have additional identifiers to accommodate those with color deficiencies.</p>
+
+                <p>This example is not only applicable in this instance, but with many elements in a system. For instance, the hover or focus animations for a hyperlink should convey that the element is selected by means other than color; the hyperlinks on this site add underlines or borders when the elements are focussed in order to better convey that the object is the current focus by a means other than color.</p>
+
+            </blockquote>
+
+        </section>
 
     </section>
 
     <footer>
-        <a id="previous" href="accessibility.html" aria-label="Previous section navigation"><i class="fas fa-arrow-left"></i></a>
-        <p aria-label="Current page indicator">Accessibility: Introduction</p>
+        <a id="previous" href="accessibility-sectionTwo.html" aria-label="Previous section navigation"><i class="fas fa-arrow-left"></i></a>
+        <p aria-label="Current page indicator">Accessibility: Conclusion</p>
         <a id="next" class="disabled" aria-label="Next section navigation"><i class="fas fa-arrow-right"></i></a>
     </footer>
 

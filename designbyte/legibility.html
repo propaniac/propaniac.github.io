@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>designbyte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="global.css">
+    <script src="https://kit.fontawesome.com/d0b8b62b75.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" id="logo"><img src="images/designbyte_retina.png" alt="Design Byte logo, with design in a dark blue regular font and byte in a dark gray and bold font"></a>
+        <a href="javascript:void(0);" class="icon" onclick="headerMenu()">
+                <i class="fa fa-bars"></i>
+        </a>
+    </header>
+    <nav role="navigation" id="menu">
+        <div aria-label="Main navigational link list" id="headerMenuLinks">
+            <a href="index.html">Home</a>
+            <a href="index.html#terms">Term Pages</a>
+            <ul>
+                <li><a href="accessibility.html">Accessibility</a></li>
+                <ul>
+                    <li><a href="accessibility-sectionOne.html">Accessibility: Physical Impairments</a></li>
+                    <li><a href="accessibility-sectionTwo.html">Accessibility: Visual Impairments</a></li>
+                    <li><a href="accessibility-conclusion.html">Accessibility: Conclusions and Resources</a></li>
+                </ul>
+                <li><a href="consistency.html">Consistency</a></li>
+                <li><a href="hierarchy.html">Hierarchy</a></li>
+                <li><a href="legibility.html">Legibility</a></li>
+                <li><a href="personas.html">Personas</a></li>
+            </ul>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <section role="main" aria-label="Main page contents" id="legibility">
+        <h1>Legibility</h1>
+        <p>Legibility refers to the overall clarity of type in a system. Legibility is affected by a few different factors, all equally important.</p>
+
+        <h2>Size</h2>
+            <p>The size of text in a system correlates very much with legibility.</p>
+
+            <blockquote>
+                <p class="big-text">You prob&shy;ably have no issues reading this text.</p>
+
+                <p class="small-text">This is probably a lot harder to read.</p>
+            </blockquote>
+
+            <p>The rule of thumb for minimum text size in the web world is around 12pt, but there's more to it than this. When designing for digital devices, it is important to consider that user settings can have an effect on type size. Because of this it is becoming more normal to see the use of relative units over absolute units.</p>
+
+            <p>For web design, using the unit <em>em</em> is the easiest way to start playing with relative units. <em>1em</em> is equal to the browser's default text size. </p>
+            
+            <p>Say we have a browser where the default text size is <em>14pt</em>, then <em>1em</em> is equal to <em>14pt</em>. The text size can, in turn, be altered by incrementing the <em>em</em> value, so <em>1.25em</em> to make the text bigger or <em>0.75em</em> to make it smaller.</p>
+
+            <p>There are many specifics when it comes to <em>em</em> sizing, however, but it is good to use the value of <em>1em</em> for the <em>body</em> styling of a page to set the overall font-size based upon a user's settings. We should avoid having a system where these settings aren't used, as there could be reasons for the user's current settings (think <a href="accessibility.html">accessibility</a>).</p>
+
+            <p>For more information on font sizing and the units HTML and CSS support, see <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size">Mozilla's MDN web docs font-size page</a>.</p>
+
+            <p>Thus, we should be concious of sizing for text, avoid using anything smaller than 12pt when using absolute units, and consider using <em>em</em> or other relative units to better accommodate a user's settings.</p>
+
+        <h2>Typeface</h2>
+            <p>Some typefaces are simply more legible than others. We have a variety of typeface options out there, but in terms of legibility <em>serif</em> and <em>sans serif</em> typefaces are the ideal choices for legibility. Decorative typefaces, like cursives, are not always the most legible, so they should be avoided if legibility is a concern.</p>
+
+            <h3>Serif or Sans Serif</h3>
+                <p>First of all, what is a serif? Serif is a word that just means decoration. A serif typeface will have serifs while a sans serif does not, hence <em>sans</em> or without.</p>
+
+                <blockquote>
+
+                    <p class="serif">I am a serif. I have serifs.</p>
+
+                    <p>I am a sans serif. I do not have serifs.</p>
+
+                </blockquote>
+
+                <p>Under most circumstances, there are no major legibility differences between a serif and a sans serif typeface. The only difference is <em>aesthetic</em> — serif typefaces usually are associated with being more formal, for instance, but there are no rules about when one is better than the other in terms of aesthetics.</p>
+
+                <p>So, consider choosing a typeface which is legible by any potential users, whether it be a serif or a sans serif. Avoid using decorative fonts, like <span id="weirder-para"> comic sans or cursives</span>, to ensure that the text is legible for all users.</p>
+
+        <h2>Contrast</h2>
+            <p>Contrast is something briefly touched on in the <a href="accessibility.html">accessibility</a> page, but it plays a major role in legibility for any and all users.</p>
+
+            <p>Contrast is high when the overall shades of the foreground and background are opposites. Dark text on a light background or light text on a dark background result in <strong>high contrast</strong>.</p>
+
+            <p>Contrast is low when the shades of foreground and background are similar. Light text on a light background and dark text on a dark background are <strong>low contrast</strong>.</p>
+
+            <blockquote>
+                <p class="low-contrast">This contrast is quite low. The shade of gray is too close to the background.</p>
+
+                <p class="similar-luminance">This contrast is pretty low, too. They're different colors, but the luminance or brightness and shade of this blue is too similar to the gray's to have a high enough contrast.</p>
+
+                <p class="contrast-color"> This is decent enough contrast to be passable. It may not be the best choice for <a href="accessibility.html">accessibility</a>, however.</p>
+
+                <p>This contrast is quite high. There should be no issues with reading this.</p>
+            </blockquote>
+
+            <h3>Evaluating Contrast</h3>
+
+                <p>It is not advisable to blindly pick colors and go by eye when judging contrast. Instead, there are many tools available to ensure that contrast is high enough to maintain legibility.</p>
+
+                <p>Using a contrast ratio checker, such as <a href="https://contrast-ratio.com/">contrast-ratio.com</a>, we can check whether or not the colors we want to use have high enough contrast.</p>
+
+                <img src="images/accessibility/contrast-ratio.png" alt="">
+
+                <blockquote>
+                    <p> Plug the "Background" color into the left text area and the foreground or "Text color" into the right text area, and the contrast ratio is evaluated.</p>
+
+                    <p>Hovering over the contrast ratio value between the two text fields will display some more information about the current inputs.</p>
+
+                    <p>Following WCAG 2.0 rules on contrast, the information displayed about the current ratio conveys whether or not it passes these standards.</p>
+
+                    <p>Our brand colors for designbyte show a contrast of 10.94, which passes the WCAG standards at a AAA level, meaning the dark blue is an appropriate use for text of any size on the light gray background color.</p>
+                </blockquote>
+
+                <p>More information related to contrast and similar topics can be found in the <a href="accessibility.html">accessibility</a> sections and in the <a href="accessibility-conclusion.html">accessibility resources</a>.</p>
+
+                <p>So, to ensure legibility is adequate, it is important to ensure that contrast is high enough between the type and background elements. Use contrast ratio checkers to better gauge the contrast between two colors. Avoid blindly gauging contrast between elements, and choose colors with the intent of maintaining legibility.</p>
+
+        <h2>Line Length</h2>
+            <p>Line length plays a role in the legibility of text with regard to overall processing of data. If a line of text is too long or too short, the data can be harder to read and process.</p>
+
+            <p>While research has should that a line length of around 95 characters (about 20 average words per line) can be read the fastest, shorter lines of around 40 to 50 characters (about 12 average words per line) are preferred by most people.<a class="citation" href="about.html#citations">[Bailey, Bob.]</a></p>
+
+            <p>With this in mind, we should try to keep line length, for large blocks of text, to around 50 characters per line. This can be altered with settings such as margins. Setting the max-width of the container for large texts can be useful in adjusting line-length for responsive interfaces.</p>
+
+            <p>To maintain good legibility, we should avoid having strings of text be too long or too short, as this can hinder reading.</p>
+            
+        <h2>Line Spacing</h2>
+            <p>Line spacing refers to the overall space in between lines and blocks of text. If the space between lines is too small, finding the next lines can be inhibited, whereas if lines are too close then reading blocks of text is difficult.</p>
+
+            <p>In print, this is referred to interchangeably as <em>leading</em>, based upon the physical lead strips that went in between lines of text on printing presses. In the modern day, this is refered to things like line spacing, line height, or leading.</p>
+
+            <p>The rule of thumb for space in between lines of text is 1-4pt plus the current text setting. So, if we're using 14pt type, we'd want a leading of 15-18pt.</p>
+
+            <blockquote>
+
+                <p class="large-line-height">If we have a line height that's too large, navigation between lines gets pretty strange and it's not as apparent if a line belongs to the same body of text or not.</p>
+
+                <p class="small-line-height">If the line height is too small, lines get congested feeling and becoming quite difficult to read. It's even more daunting to look at a large block of text where the line height is very small, as it becomes easier to lose the current position. This is not fun to read or look at.</p>
+
+            </blockquote>
+
+            <p>In the web world, this can be adjusted with the <em>line-height</em> attribute. The attribute accepts the same size formats as <em>font-size</em>, so we can use <em>pt</em> for an absolute size or things like <em>em</em> for relative sizing.</p>
+
+            <p>The line-height can be adjusted for just about all text elements, but the best bet is to set a base line-height for the body, then adjust margin or line-height values individually for headings and the like only as needed. This will allow for <a href="consistency.html">consistent</a> settings, versus setting the line-height for each and every text selector.</p>
+
+            <p>The rule of thumb for space in between lines of text is 1-4pt plus the current text setting. So, if we're using 14pt type, we'd want a leading of 15-18pt.</p>
+
+            <p>If we're using relative units like <em>em</em>, just try setting line-height to a couple of decimal points, 0.2 to 0.5 depending on size, greater than the font-size.</p>
+
+        <h2>Conclusions</h2>
+            <p>It is important to consider all of these factors when managing text content. Text size, typeface, line length, and line spacing all have an important role in communicating content well, and become more important as the size of a text block grows.</p>
+
+            <p>Consider <a href="accessibility.html">accessibility</a> while working with type settings in general, and <a href="consistency.html">consistency</a> when working with a large system or family of systems.</p>
+
+
+    </section>
+
+
+    <!-- Script calls -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>

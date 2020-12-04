@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>designbyte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="global.css">
+    <script src="https://kit.fontawesome.com/d0b8b62b75.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" id="logo"><img src="images/designbyte_retina.png" alt="Design Byte logo, with design in a dark blue regular font and byte in a dark gray and bold font"></a>
+        <a href="javascript:void(0);" class="icon" onclick="headerMenu()">
+                <i class="fa fa-bars"></i>
+        </a>
+    </header>
+    <nav role="navigation" id="menu">
+        <div aria-label="Main navigational link list" id="headerMenuLinks">
+            <a href="index.html">Home</a>
+            <a href="index.html#terms">Term Pages</a>
+            <ul>
+                <li><a href="accessibility.html">Accessibility</a></li>
+                <ul>
+                    <li><a href="accessibility-sectionOne.html">Accessibility: Physical Impairments</a></li>
+                    <li><a href="accessibility-sectionTwo.html">Accessibility: Visual Impairments</a></li>
+                    <li><a href="accessibility-conclusion.html">Accessibility: Conclusions and Resources</a></li>
+                </ul>
+                <li><a href="consistency.html">Consistency</a></li>
+                <li><a href="hierarchy.html">Hierarchy</a></li>
+                <li><a href="legibility.html">Legibility</a></li>
+                <li><a href="personas.html">Personas</a></li>
+            </ul>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <section role="main" aria-label="Main page contents" id="hierarchy">
+        <h1>Hierarchy</h1>
+
+        <p>In a basic sense, hierarchy is the general order or organization of a system. In a corporation, this would refer to the chain of command.</p>
+
+        <p>Visual hierarchy is how this order is conveyed through, you guessed it, visual elements. Utilizing visual hierarchy can improve readability and comprehension of a system.</p>
+
+        <p>The focus of this page will be on <strong>typographic hierarchy</strong> and the means by which it can be conveyed effectively.</p>
+
+        <h2>Stair Structures</h2>
+            
+            <p>Stair structures are a means of conveying typographic and textual elements by depicting sequences of connections with indentation. These indentations symbolize a parent and child relationship, where the parent has less indentation and a child is conveyed with more indentation than the parent it is beneath.</p>
+
+            <blockquote>
+                <h3>A snippet of CSS code without stair structuring:</h3>
+                <pre role="figure"><code aria-label="A snippet of code to show a what it looks like without stair structuring. All elements have the same alignment and their relationships are difficult to understand without fully reading the code snippet.">@media only screen and (max-width: 720px) {
+body {
+margin-top: 88px;
+padding: 1em;
+font-size: 12pt;
+}
+}</code></pre>
+
+                <h3>A snippet of CSS code composed with stair structuring:</h3>
+
+                <pre role="figure"><code aria-label="A snippet of code to show an example of stair structuring. Each child item is indented to indicate the relationship with the above parent element and make the code more readable and understandable.">@media only screen and (max-width: 720px) {
+    body {
+        margin-top: 88px;
+        padding: 1em;
+        font-size: 12pt;
+    }
+}</code></pre>
+            </blockquote>
+
+            <p>Stair structuring is a common practice when writing code, as it assists the writer and reader with understanding the relationships between elements.</p>
+            <p>Without stair structure, it is incredibly difficult to see the relationships between elements without really reading the whole set of data. With stair structuring, it's much easier to understand the relationships between child and parent elements without having to dig too deep.</p>
+
+            <blockquote>
+                <h3>Holiday gift ideas</h3>
+                <ul>
+                    <li><h4>Jeremy</h4></li>
+                    <ul>
+                        <li>USB type-C hub</li>
+                        <li>IKEA gift card</li>
+                        <ul>
+                            <li>He can get all of the meatballs and pick some furniture he likes</li>
+                        </ul>
+                        <li>Super Smash Bros.: Melee</li>
+                        <li>3D printer filament</li>
+                    </ul>
+                    <li><h4>Scott</h4></li>
+                    <ul>
+                        <li>Blue light filtering glasses</li>
+                        <li>Mousse</li>
+                        <li>Minions 2 Blu-Ray?</li>
+                        <ul>
+                            <li>He loves those minions, but I don't know if he owns it already</li>
+                        </ul>
+                    </ul>
+                </ul>
+            </blockquote>
+
+            <p>On top of being helpful to organize code, stair structures are beneficial for listed elements. The relationships between parent and child elements is easy to follow and allows for good readability without altering text styling too much.</p>
+
+        <h2>Text-size and Styling</h2>
+            
+            <p>The relationships between elements can be conveyed using alterations to text size or other styling. Using text settings that contrast other elements allows for parent-child relationships to be communicated easily in some data sets.</p>
+
+            <blockquote>
+                <p><strong>An article about stuff</strong></p>
+                <p><strong>What is stuff?</strong></p>
+                <p>Stuff can be big or small.</p>
+                <p><strong>Big</strong></p>
+                <p>Big stuff is bigger than small stuff.</p>
+                <p>. . .</p>
+            </blockquote>
+
+            <p>Webpages will almost always require differentiations between multiple heading styles and the body text. Without differentiation between heading styles, parent-child relationships are blurred and unclear.</p>
+
+            <img src="images/hierarchy/internetingishard_text-style-hierarchy.jpg" alt="A screenshot of a page on the interneting is hard website. The article shows several paragraphs of text, where the heading styles change from being large and thin type to a smaller bold type to show a hierarchal, parent and child relationship.">
+
+            <blockquote>
+                <p>The above screenshot shows a section of the <a href="https://www.internetingishard.com/html-and-css/flexbox/">CSS flexbox guide on the Interneting is Hard website</a>, where hierarchy is demonstrated through changes in text styling. The main heading is a large, thin typeface (along with some additional decoration and centered type), which is contrasted by a sub-heading with smaller, bold type, demonstrating a clear parent-child relationship. Body text uses an consistent typeface which is smaller than the heading and sub-heading in order to demonstrate a parent-child relationship between either element.</p>
+            </blockquote>
+
+            <p>It is key to define styles for things like headings where there is contrast between a parent or main heading and any child, and sub-children if necessary.</p>
+
+            <p>It is important to classify use cases for the elements early on to maintain <a href="consistency.html">consistency</a> throughout the system — avoid making design choices with regard to hierarchy styling that are inconsistent without reason.</p>
+
+        <h2>Conclusions About Hierarchy</h2>
+            <p>Demonstrating effective hierarchy can ultimately aid with creating a system which can be more easily followed and understood. Poor communication of hierarchy can make a system harder to use.</p>
+
+            <p>Pair hierarchy with <a href="consistency.html">consistency</a> for the best results — inconsistent hierarchy can make a system just as hard to understand as a system with poor hierarchy.</p>
+
+    </section>
+
+
+    <!-- Script calls -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
